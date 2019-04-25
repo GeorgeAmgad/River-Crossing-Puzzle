@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="79cf9c8f-e0c7-4900-8f13-d39a41674b1e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/georg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/River Crossing Puzzle.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/GameEngine$Position.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/GameEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/META-INF/River Crossing Puzzle.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/StartEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/com/intellij/uiDesigner/core/GridLayoutManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/com/intellij/uiDesigner/core/Spacer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/controller/IRiverCrossingController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/controller/RiverCrossingController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/model/Crosser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/model/ICrosser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/model/visuals/Chicken.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/model/visuals/Dog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/model/visuals/Farmer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/model/visuals/ISprite.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/model/visuals/Veggies.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/32px/001-work.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/32px/002-sheep-mirror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/32px/002-sheep.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/32px/003-hen-mirror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/32px/003-hen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/32px/004-dog-mirror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/32px/004-dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/32px/005-harvest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/32px/raft copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/64px/001-work-mirror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/64px/001-work.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/64px/002-sheep.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/64px/003-hen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/64px/004-dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/64px/005-harvest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/River.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/RiverCrossingView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/Start.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/raft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/strategies/ICrossingStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/strategies/Story1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/strategies/Story2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GameEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StartEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/IRiverCrossingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/RiverCrossingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Crosser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/ICrosser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/visuals/Chicken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/visuals/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/visuals/Farmer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/visuals/ISprite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/visuals/Veggies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/32px/001-work.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/32px/002-sheep-mirror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/32px/002-sheep.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/32px/003-hen-mirror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/32px/003-hen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/32px/004-dog-mirror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/32px/004-dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/32px/005-harvest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/32px/raft copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/64px/001-work-mirror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/64px/001-work.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/64px/002-sheep.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/64px/003-hen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/64px/004-dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/64px/005-harvest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/River.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/RiverCrossingView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/Start.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/raft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategies/ICrossingStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategies/Story1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategies/Story2.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GameEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-765">
+              <caret line="42" column="40" lean-forward="true" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+              <folding>
+                <element signature="method#initialize#0;class#GameEngine#0" />
+                <element signature="method#showInstructions#0;class#GameEngine#0" />
+                <element signature="method#getLevelName#0;class#GameEngine#0" />
+                <element signature="method#clickSprite#0;class#GameEngine#0" />
+                <element signature="method#render#0;class#GameEngine#0" />
+                <element signature="method#initiateMovement#0;class#GameEngine#0" />
+                <element signature="method#update#0;class#GameEngine#0" />
+                <element signature="class#Position#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/RiverCrossingController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="730">
+              <caret line="60" column="81" selection-start-line="60" selection-start-column="81" selection-end-line="60" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#resetGame#0;class#RiverCrossingController#0" />
+                <element signature="e#918#919#0" expanded="true" />
+                <element signature="e#950#951#0" expanded="true" />
+                <element signature="e#1017#1018#0" expanded="true" />
+                <element signature="e#1048#1049#0" expanded="true" />
+                <element signature="method#canMove#0;class#RiverCrossingController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/strategies/Story1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3851#3852#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/RiverCrossingView.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Crosser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Singleton" />
+        <option value="Interface" />
+        <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/model/ICrosser.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Main.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/ICrosser.java" />
+        <option value="$PROJECT_DIR$/src/RiverCrossingUI.java" />
+        <option value="$PROJECT_DIR$/src/RiverCrossingUI.form" />
+        <option value="$PROJECT_DIR$/src/RiverCrossView.java" />
+        <option value="$PROJECT_DIR$/src/ICrossingStrategy.java" />
+        <option value="$PROJECT_DIR$/src/strategies/ICrossingStrategy.java" />
+        <option value="$PROJECT_DIR$/src/model/IRiverCrossingController.java" />
+        <option value="$PROJECT_DIR$/src/IRiverCrossingController.java" />
+        <option value="$PROJECT_DIR$/src/model/ICrosser.java" />
+        <option value="$PROJECT_DIR$/src/model/IWeight.java" />
+        <option value="$PROJECT_DIR$/src/model/visuals/IImage.java" />
+        <option value="$PROJECT_DIR$/src/RiverCrossingController.java" />
+        <option value="$PROJECT_DIR$/src/RiverCrossingView.form" />
+        <option value="$PROJECT_DIR$/src/RiverCrossingView.java" />
+        <option value="$PROJECT_DIR$/src/RiverCrossingView.fxml" />
+        <option value="$PROJECT_DIR$/src/Start.fxml" />
+        <option value="$PROJECT_DIR$/src/Start.java" />
+        <option value="$PROJECT_DIR$/src/View/GameEngine.java" />
+        <option value="$PROJECT_DIR$/src/resources/Start.fxml" />
+        <option value="$PROJECT_DIR$/src/View/StartEngine.java" />
+        <option value="$PROJECT_DIR$/src/StartEngine.java" />
+        <option value="$PROJECT_DIR$/src/model/visuals/ISprite.java" />
+        <option value="$PROJECT_DIR$/src/model/visuals/Veggies.java" />
+        <option value="$PROJECT_DIR$/src/strategies/Story2.java" />
+        <option value="$PROJECT_DIR$/src/model/Crosser.java" />
+        <option value="$PROJECT_DIR$/src/model/visuals/Farmer.java" />
+        <option value="$PROJECT_DIR$/src/model/visuals/Dog.java" />
+        <option value="$PROJECT_DIR$/src/model/visuals/Chicken.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/controller/RiverCrossingController.java" />
+        <option value="$PROJECT_DIR$/src/resources/RiverCrossingView.fxml" />
+        <option value="$PROJECT_DIR$/src/GameEngine.java" />
+        <option value="$PROJECT_DIR$/src/strategies/Story1.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-334" />
+    <option name="y" value="-27" />
+    <option name="width" value="1380" />
+    <option name="height" value="735" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="River Crossing Puzzle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="River Crossing Puzzle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="River Crossing Puzzle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="River Crossing Puzzle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="River Crossing Puzzle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="River Crossing Puzzle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="strategies" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="River Crossing Puzzle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\georg\Desktop\River Crossing Puzzle\src\resources\32px" />
+      <recent name="C:\Users\georg\Desktop\River Crossing Puzzle\src\resources" />
+      <recent name="C:\Users\georg\Desktop\River Crossing Puzzle\src\View" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="River Crossing Puzzle" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="79cf9c8f-e0c7-4900-8f13-d39a41674b1e" name="Default Changelist" comment="" />
+      <created>1555435955721</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1555435955721</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.21028744" />
+      <window_info id="Structure" order="1" sideWeight="0.5008183" side_tool="true" weight="0.18986385" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.2831424" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.5319149" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3289689" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/RiverCrossView.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/IView.java" />
+    <entry file="file://$PROJECT_DIR$/../Binary Heap/src/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/IWeight.java" />
+    <entry file="file://$PROJECT_DIR$/../Bus Station/Ali/College/java term 4/netbeans/Bus Station/src/bus/station/BusStation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#1459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RiverCrossingView.form" />
+    <entry file="file://$PROJECT_DIR$/src/RiverCrossingView.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="388" column="23" selection-start-line="388" selection-start-column="23" selection-end-line="388" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/ext/jfxrt.jar!/javafx/fxml/Initializable.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/IRiverCrossingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/Start.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/River.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/64px/001-work.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/64px/005-harvest.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/64px/002-sheep.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/32px/raft copy.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strategies/ICrossingStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/visuals/ISprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/javax/imageio/ImageIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="1300" column="18" selection-start-line="1300" selection-start-column="18" selection-end-line="1300" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strategies/Story2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/com/sun/javafx/event/EventHandlerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="190" column="20" selection-start-line="190" selection-start-column="20" selection-end-line="190" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/com/sun/javafx/event/BasicEventDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/com/sun/javafx/event/EventDispatchChainImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="113" column="36" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/com/sun/javafx/event/EventUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/com/sun/javafx/event/CompositeEventDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/com/sun/javafx/event/CompositeEventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StartEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/ICrosser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/visuals/Veggies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/visuals/Chicken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/visuals/Dog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/visuals/Farmer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="2547" column="48" selection-start-line="2547" selection-start-column="48" selection-end-line="2547" selection-end-column="48" />
+          <folding>
+            <element signature="e#66921#66922#0" expanded="true" />
+            <element signature="e#66966#66967#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Crosser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/RiverCrossingView.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/RiverCrossingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="730">
+          <caret line="60" column="81" selection-start-line="60" selection-start-column="81" selection-end-line="60" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#resetGame#0;class#RiverCrossingController#0" />
+            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#1017#1018#0" expanded="true" />
+            <element signature="e#1048#1049#0" expanded="true" />
+            <element signature="method#canMove#0;class#RiverCrossingController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765">
+          <caret line="42" column="40" lean-forward="true" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+          <folding>
+            <element signature="method#initialize#0;class#GameEngine#0" />
+            <element signature="method#showInstructions#0;class#GameEngine#0" />
+            <element signature="method#getLevelName#0;class#GameEngine#0" />
+            <element signature="method#clickSprite#0;class#GameEngine#0" />
+            <element signature="method#render#0;class#GameEngine#0" />
+            <element signature="method#initiateMovement#0;class#GameEngine#0" />
+            <element signature="method#update#0;class#GameEngine#0" />
+            <element signature="class#Position#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strategies/Story1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3851#3852#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
