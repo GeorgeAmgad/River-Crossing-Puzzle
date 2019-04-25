@@ -1,5 +1,4 @@
 package model;
-import javafx.geometry.Dimension2D;
 import model.visuals.ISprite;
 import java.awt.image.BufferedImage;
 
@@ -10,7 +9,6 @@ public class Crosser implements ICrosser {
     private Boolean canSail;
     private int type;
     private String label;
-    private Dimension2D position;
 
     public Crosser(ISprite image, double weight, Boolean canSail, int type, String label) {
         this.image = image;

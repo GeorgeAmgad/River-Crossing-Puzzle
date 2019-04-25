@@ -1,7 +1,11 @@
 package controller;
-import model.Crosser;
+
 import model.ICrosser;
 import strategies.ICrossingStrategy;
+
+import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -102,16 +106,40 @@ public class RiverCrossingController implements IRiverCrossingController {
 
     @Override
     public void saveGame() {
+        try {
+            FileOutputStream file = new FileOutputStream(new File("resources/saved_game.xml"));
+            XMLEncoder encoder = new XMLEncoder(file);
+            encoder.writeObject(this);
+            encoder.close();
+            file.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
     @Override
     public void loadGame() {
-
+        try {
+            FileInputStream file = new FileInputStream(new File("resources/saved_game.xml"));
+            XMLDecoder decoder = new XMLDecoder(file);
+            RiverCrossingController fetchedController = (RiverCrossingController) decoder.readObject();
+            strategy = fetchedController.strategy;
+            rightBank = fetchedController.rightBank;
+            leftBank = fetchedController.leftBank;
+            numberOfSales = fetchedController.numberOfSales;
+            boatOnTheLeftBank = fetchedController.boatOnTheLeftBank;
+            file.close();
+            decoder.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public List<List<ICrosser>> solveGame() {
         return null;
     }
+
 }
