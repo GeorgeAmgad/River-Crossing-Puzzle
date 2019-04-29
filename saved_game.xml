@@ -1,0 +1,79 @@
+<controller.RiverCrossingController>
+  <strategy class="strategies.Story1">
+    <Instructions>
+      <string>“ A farmer wants to cross a river and take with him a dog, a chicken and a basket of veggies.” 
+
+1. The farmer is the only one who can sail the boat. He can only take one passenger, in addition to himself. 
+2. The dog can harm the chicken and the chicken can eat the veggies 
+3. You can not leave any two crossers on the same bank if they can harm each other 
+
+How can the farmer get across the river with all the 2 animals and the plant without any losses?</string>
+    </Instructions>
+    <initialCrossers>
+      <model.Crosser>
+        <image class="model.visuals.Farmer"/>
+        <weight>-1.0</weight>
+        <canSail>true</canSail>
+        <type>3</type>
+        <label>Farmer</label>
+      </model.Crosser>
+      <model.Crosser>
+        <image class="model.visuals.Dog"/>
+        <weight>-1.0</weight>
+        <canSail>false</canSail>
+        <type>2</type>
+        <label>Dog</label>
+      </model.Crosser>
+      <model.Crosser>
+        <image class="model.visuals.Chicken"/>
+        <weight>-1.0</weight>
+        <canSail>false</canSail>
+        <type>1</type>
+        <label>Chicken</label>
+      </model.Crosser>
+      <model.Crosser>
+        <image class="model.visuals.Veggies"/>
+        <weight>-1.0</weight>
+        <canSail>false</canSail>
+        <type>0</type>
+        <label>Plant</label>
+      </model.Crosser>
+    </initialCrossers>
+  </strategy>
+  <rightBank>
+    <model.Crosser>
+      <image class="model.visuals.Veggies" reference="../../../strategy/initialCrossers/model.Crosser[4]/image"/>
+      <weight>-1.0</weight>
+      <canSail>false</canSail>
+      <type>0</type>
+      <label>Plant</label>
+    </model.Crosser>
+  </rightBank>
+  <leftBank>
+    <model.Crosser>
+      <image class="model.visuals.Dog" reference="../../../strategy/initialCrossers/model.Crosser[2]/image"/>
+      <weight>-1.0</weight>
+      <canSail>false</canSail>
+      <type>2</type>
+      <label>Dog</label>
+    </model.Crosser>
+  </leftBank>
+  <tempCrossers>
+    <model.Crosser>
+      <image class="model.visuals.Chicken" reference="../../../strategy/initialCrossers/model.Crosser[3]/image"/>
+      <weight>-1.0</weight>
+      <canSail>false</canSail>
+      <type>1</type>
+      <label>Chicken</label>
+    </model.Crosser>
+    <model.Crosser>
+      <image class="model.visuals.Farmer" reference="../../../strategy/initialCrossers/model.Crosser/image"/>
+      <weight>-1.0</weight>
+      <canSail>true</canSail>
+      <type>3</type>
+      <label>Farmer</label>
+    </model.Crosser>
+  </tempCrossers>
+  <numberOfSales>3</numberOfSales>
+  <boatOnTheLeftBank>false</boatOnTheLeftBank>
+</controller.RiverCrossingController>

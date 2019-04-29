@@ -303,6 +303,18 @@ public class GameEngine implements Initializable {
         moves.setText(String.valueOf(controller.getNumberOfSails()));
     }
 
+    public void saveGame() {
+        controller.setTempCrossers(crossers);
+        controller.saveGame();
+    }
+
+    public void loadGame() {
+        controller.loadGame();
+        crossers = controller.getTempCrossers();
+        update();
+        render();
+    }
+
     class Position {
         double x;
         double y;

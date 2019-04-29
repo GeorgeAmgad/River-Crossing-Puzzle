@@ -1,12 +1,16 @@
 package controller;
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+import com.thoughtworks.xstream.security.AnyTypePermission;
+import com.thoughtworks.xstream.security.NoTypePermission;
+import com.thoughtworks.xstream.security.NullPermission;
+import com.thoughtworks.xstream.security.PrimitiveTypePermission;
 import model.ICrosser;
 import strategies.ICrossingStrategy;
-
-import java.beans.XMLDecoder;
-import java.beans.XMLEncoder;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
@@ -16,6 +20,8 @@ public class RiverCrossingController implements IRiverCrossingController {
 
     private List<ICrosser> rightBank;
     private List<ICrosser> leftBank;
+    // this list is for saving and loading
+    private List<ICrosser> tempCrossers;
 
     private int numberOfSales;
     private boolean boatOnTheLeftBank;
@@ -107,10 +113,17 @@ public class RiverCrossingController implements IRiverCrossingController {
     @Override
     public void saveGame() {
         try {
-            FileOutputStream file = new FileOutputStream(new File("resources/saved_game.xml"));
-            XMLEncoder encoder = new XMLEncoder(file);
-            encoder.writeObject(this);
-            encoder.close();
+            FileOutputStream file = new FileOutputStream(new File("./saved_game.xml"));
+            XStream xStream = new XStream(new DomDriver());
+
+
+            // this line avoids security warnings
+            xStream.allowTypesByRegExp(new String[] { ".*" });
+
+
+            xStream.toXML(this,file);
+
+
             file.close();
 
         } catch (IOException e) {
@@ -122,19 +135,33 @@ public class RiverCrossingController implements IRiverCrossingController {
     @Override
     public void loadGame() {
         try {
-            FileInputStream file = new FileInputStream(new File("resources/saved_game.xml"));
-            XMLDecoder decoder = new XMLDecoder(file);
-            RiverCrossingController fetchedController = (RiverCrossingController) decoder.readObject();
+            FileInputStream file = new FileInputStream(new File("./saved_game.xml"));
+            XStream xStream = new XStream(new DomDriver());
+
+            // this line avoids security warnings
+            xStream.allowTypesByRegExp(new String[] { ".*" });
+
+            RiverCrossingController fetchedController = (RiverCrossingController) xStream.fromXML(file);
             strategy = fetchedController.strategy;
             rightBank = fetchedController.rightBank;
             leftBank = fetchedController.leftBank;
             numberOfSales = fetchedController.numberOfSales;
             boatOnTheLeftBank = fetchedController.boatOnTheLeftBank;
+            tempCrossers = fetchedController.tempCrossers;
+
+
             file.close();
-            decoder.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void setTempCrossers(List<ICrosser> tempCrossers) {
+        this.tempCrossers = tempCrossers;
+    }
+
+    public List<ICrosser> getTempCrossers() {
+        return tempCrossers;
     }
 
     @Override
