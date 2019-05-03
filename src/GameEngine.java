@@ -1,5 +1,6 @@
 import controller.RiverCrossingController;
 import javafx.embed.swing.SwingFXUtils;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -316,6 +317,9 @@ public class GameEngine implements Initializable {
         leftBank = controller.getCrossersOnLeftBank();
         rightBank = controller.getCrossersOnRightBank();
         moves.setText(String.valueOf(controller.getNumberOfSails()));
+
+        redo.setDisable(!controller.canRedo());
+        undo.setDisable(!controller.canUndo());
     }
 
     public void saveGame() {
@@ -329,6 +333,22 @@ public class GameEngine implements Initializable {
         controller.loadGame();
         crossers = controller.getTempCrossers();
         message.setText("Loaded game successfully!");
+        update();
+        render();
+    }
+
+    public void undo() {
+        if (controller.canUndo()) {
+            controller.undo();
+        }
+        update();
+        render();
+    }
+
+    public void redo() {
+        if (controller.canRedo()) {
+            controller.redo();
+        }
         update();
         render();
     }

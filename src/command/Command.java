@@ -13,39 +13,31 @@ public class Command {
 
 
 
-    void saveMove(List<ICrosser> crossers, boolean fromLeftToRight) {
+    public void saveMove(List<ICrosser> crossers, boolean fromLeftToRight) {
         temp = new Stack<>();
         moves.push(new Move(crossers, fromLeftToRight));
     }
 
-    Move undoMove() {
+    public Move undoMove() {
         Move curr = moves.pop();
         temp.push(curr);
         return curr;
     }
 
-    Move redoMove() {
+    public Move redoMove() {
         Move curr = temp.pop();
         moves.push(curr);
         return curr;
     }
 
-    boolean canRedoMove() {
+    public boolean canRedoMove() {
         return !temp.empty();
     }
 
-    boolean canUndoMove() {
-        return !temp.empty();
+    public boolean canUndoMove() {
+        return !moves.empty();
     }
 
-    class Move {
-        List<ICrosser> Crosser;
-        boolean fromLeftToRight;
 
-        public Move(List<ICrosser> crosser, boolean fromLeftToRight) {
-            Crosser = crosser;
-            this.fromLeftToRight = fromLeftToRight;
-        }
-    }
 
 }

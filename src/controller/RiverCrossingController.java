@@ -2,8 +2,11 @@ package controller;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
+import command.Command;
+import command.Move;
 import model.ICrosser;
 import strategies.ICrossingStrategy;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -21,6 +24,8 @@ public class RiverCrossingController implements IRiverCrossingController {
 
     private int numberOfSales;
     private boolean boatOnTheLeftBank;
+
+    private Command command = new Command();
 
 
     @Override
@@ -70,6 +75,8 @@ public class RiverCrossingController implements IRiverCrossingController {
 
     @Override
     public void doMove(List<ICrosser> crossers, boolean fromLeftToRightBank) {
+        List<ICrosser> savedCrossers = new ArrayList<>(crossers);
+        command.saveMove(savedCrossers, fromLeftToRightBank);
         Iterator<ICrosser> iterator = crossers.iterator();
         if (fromLeftToRightBank) {
             while (iterator.hasNext()) {
@@ -88,22 +95,50 @@ public class RiverCrossingController implements IRiverCrossingController {
 
     @Override
     public boolean canUndo() {
-        return false;
+        return command.canUndoMove();
     }
 
     @Override
     public boolean canRedo() {
-        return false;
+        return command.canRedoMove();
     }
 
     @Override
     public void undo() {
+        Move move = command.undoMove();
 
+        if (move.isFromLeftToRight()) {
+            for (ICrosser crosser : move.getCrosser()) {
+                leftBank.add(crosser); // inverted from the move method
+                rightBank.remove(crosser);
+            }
+        } else {
+            for (ICrosser crosser : move.getCrosser()) {
+                rightBank.add(crosser); // inverted from the move method
+                leftBank.remove(crosser);
+            }
+        }
+        boatOnTheLeftBank = move.isFromLeftToRight();
+        numberOfSales--;
     }
 
     @Override
     public void redo() {
+        Move move = command.redoMove();
 
+        if (move.isFromLeftToRight()) {
+            for (ICrosser crosser : move.getCrosser()) {
+                rightBank.add(crosser); // same as move method
+                leftBank.remove(crosser);
+            }
+        } else {
+            for (ICrosser crosser : move.getCrosser()) {
+                leftBank.add(crosser); // same as move method
+                rightBank.remove(crosser);
+            }
+        }
+        boatOnTheLeftBank = !move.isFromLeftToRight();  //switch boat place in any move
+        numberOfSales++;
     }
 
     @Override
@@ -113,9 +148,9 @@ public class RiverCrossingController implements IRiverCrossingController {
             XStream xStream = new XStream(new DomDriver());
 
             // this line avoids security warnings
-            xStream.allowTypesByRegExp(new String[] { ".*" });
+            xStream.allowTypesByRegExp(new String[]{".*"});
 
-            xStream.toXML(this,file);
+            xStream.toXML(this, file);
 
             file.close();
 
@@ -132,7 +167,7 @@ public class RiverCrossingController implements IRiverCrossingController {
             XStream xStream = new XStream(new DomDriver());
 
             // this line avoids security warnings
-            xStream.allowTypesByRegExp(new String[] { ".*" });
+            xStream.allowTypesByRegExp(new String[]{".*"});
 
             RiverCrossingController fetchedController = (RiverCrossingController) xStream.fromXML(file);
             strategy = fetchedController.strategy;
