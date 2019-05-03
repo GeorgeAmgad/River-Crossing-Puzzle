@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79cf9c8f-e0c7-4900-8f13-d39a41674b1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/xstream_1_4_11_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saved_game.xml" afterDir="false" />
+    <list default="true" id="79cf9c8f-e0c7-4900-8f13-d39a41674b1e" name="Default Changelist" comment="xml save and load in controller only">
+      <change afterPath="$PROJECT_DIR$/src/command/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/visuals/Farmer2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/visuals/Sheep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/64px/006-work2-mirror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/64px/006-work2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/River Crossing Puzzle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/River Crossing Puzzle.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/River Crossing Puzzle/GameEngine$Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/GameEngine$Position.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/River Crossing Puzzle/GameEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/GameEngine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/River Crossing Puzzle/StartEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/StartEngine.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/River Crossing Puzzle/controller/RiverCrossingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/controller/RiverCrossingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/River Crossing Puzzle/model/Crosser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/model/Crosser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/RiverCrossingView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/RiverCrossingView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/Start.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/Start.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/River Crossing Puzzle/model/visuals/Farmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/model/visuals/Farmer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/32px/002-sheep-mirror.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/resources/32px/002-sheep-mirror.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/River Crossing Puzzle/strategies/Story1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/strategies/Story1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/River Crossing Puzzle/strategies/Story2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/River Crossing Puzzle/strategies/Story2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_game.xml" beforeDir="false" afterPath="$PROJECT_DIR$/saved_game.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StartEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StartEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/ICommand.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/RiverCrossingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/RiverCrossingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/RiverCrossingView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/RiverCrossingView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/visuals/Farmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/visuals/Farmer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/32px/002-sheep-mirror.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/32px/002-sheep-mirror.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategies/Story1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/Story1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategies/Story2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/Story2.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,79 +38,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controller/RiverCrossingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="141" column="62" lean-forward="true" selection-start-line="141" selection-start-column="62" selection-end-line="141" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#resetGame#0;class#RiverCrossingController#0" />
-                <element signature="method#doMove#0;class#RiverCrossingController#0" />
-                <element signature="e#3588#3589#0" expanded="true" />
-                <element signature="e#3636#3637#0" expanded="true" />
-                <element signature="e#3683#3684#0" expanded="true" />
-                <element signature="e#3718#3719#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/saved_game.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/FileOutputStream.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="161" selection-start-line="161" selection-end-line="161" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="312" column="48" lean-forward="true" selection-start-line="312" selection-start-column="48" selection-end-line="312" selection-end-column="48" />
+            <state relative-caret-position="2010">
+              <caret line="285" column="13" selection-start-line="285" selection-start-column="13" selection-end-line="285" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/command/Command.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2233#3855#0" />
-                <element signature="e#3861#4179#0" />
-                <element signature="e#4290#6035#0" />
-                <element signature="e#6041#6282#0" />
-                <element signature="e#6288#9667#0" />
-                <element signature="e#11615#12083#0" />
-                <element signature="e#12089#12300#0" />
+                <element signature="e#629#630#0" expanded="true" />
+                <element signature="e#663#664#0" expanded="true" />
+                <element signature="e#694#695#0" expanded="true" />
+                <element signature="e#717#718#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/command/ICommand.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/RiverCrossingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
+            <state relative-caret-position="17">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/strategies/Story1.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/IRiverCrossingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+            <state relative-caret-position="204">
+              <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3816#3817#0" expanded="true" />
-                <element signature="e#3851#3852#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,8 +99,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/strategies/Story2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+            <state relative-caret-position="85">
+              <caret line="39" column="90" lean-forward="true" selection-start-line="39" selection-start-column="90" selection-end-line="39" selection-end-column="90" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2335#2336#0" expanded="true" />
+                <element signature="e#2370#2371#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/visuals/Sheep.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/visuals/Farmer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="25" column="5" selection-start-line="9" selection-end-line="25" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/visuals/Farmer2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,11 +149,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Crosser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -149,8 +163,8 @@
         <option value="Singleton" />
         <option value="JavaFXApplication" />
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -187,22 +201,25 @@
         <option value="$PROJECT_DIR$/src/Start.java" />
         <option value="$PROJECT_DIR$/src/View/GameEngine.java" />
         <option value="$PROJECT_DIR$/src/View/StartEngine.java" />
-        <option value="$PROJECT_DIR$/src/StartEngine.java" />
         <option value="$PROJECT_DIR$/src/model/visuals/ISprite.java" />
         <option value="$PROJECT_DIR$/src/model/visuals/Veggies.java" />
-        <option value="$PROJECT_DIR$/src/model/visuals/Farmer.java" />
         <option value="$PROJECT_DIR$/src/model/visuals/Dog.java" />
         <option value="$PROJECT_DIR$/src/model/visuals/Chicken.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/strategies/Story1.java" />
         <option value="$PROJECT_DIR$/src/model/ICrosser.java" />
         <option value="$PROJECT_DIR$/src/resources/Start.fxml" />
-        <option value="$PROJECT_DIR$/src/strategies/Story2.java" />
         <option value="$PROJECT_DIR$/src/model/Crosser.java" />
         <option value="$PROJECT_DIR$/src/command/ICommand.java" />
         <option value="$PROJECT_DIR$/src/resources/RiverCrossingView.fxml" />
-        <option value="$PROJECT_DIR$/src/GameEngine.java" />
+        <option value="$PROJECT_DIR$/src/strategies/Story1.java" />
+        <option value="$PROJECT_DIR$/src/StartEngine.java" />
         <option value="$PROJECT_DIR$/src/controller/RiverCrossingController.java" />
+        <option value="$PROJECT_DIR$/src/model/visuals/Sheep.java" />
+        <option value="$PROJECT_DIR$/src/model/visuals/Farmer.java" />
+        <option value="$PROJECT_DIR$/src/model/visuals/Farmer2.java" />
+        <option value="$PROJECT_DIR$/src/GameEngine.java" />
+        <option value="$PROJECT_DIR$/src/strategies/Story2.java" />
+        <option value="$PROJECT_DIR$/src/command/Command.java" />
       </list>
     </option>
   </component>
@@ -218,8 +235,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -242,7 +257,13 @@
               <item name="River Crossing Puzzle" type="b2602c69:ProjectViewProjectNode" />
               <item name="River Crossing Puzzle" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="River Crossing Puzzle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="River Crossing Puzzle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="River Crossing Puzzle" type="b2602c69:ProjectViewProjectNode" />
@@ -258,19 +279,24 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="G:/java libs/xstream-1.4.11.1/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.27701148" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\georg\Desktop\River Crossing Puzzle\src\resources\32px" />
+      <recent name="C:\Users\georg\Desktop\River Crossing Puzzle" />
+      <recent name="C:\Users\georg\Desktop\River Crossing Puzzle\src" />
       <recent name="C:\Users\georg\Desktop\River Crossing Puzzle\src\resources" />
+      <recent name="C:\Users\georg\Desktop\River Crossing Puzzle\src\resources\32px" />
       <recent name="C:\Users\georg\Desktop\River Crossing Puzzle\src\View" />
     </key>
   </component>
@@ -338,7 +364,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.21331316" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.19213313" />
       <window_info id="Structure" order="1" sideWeight="0.5008183" side_tool="true" weight="0.18986385" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -438,16 +464,6 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/ext/jfxrt.jar!/javafx/fxml/Initializable.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/IRiverCrossingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/River.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -462,16 +478,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/32px/raft copy.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/strategies/ICrossingStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/visuals/ISprite.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -529,16 +535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StartEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/visuals/Veggies.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -569,28 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/visuals/Farmer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -609,55 +583,6 @@
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/command/ICommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/strategies/Story1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3816#3817#0" expanded="true" />
-            <element signature="e#3851#3852#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/ICrosser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/strategies/Story2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Crosser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/saved_game.xml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/RiverCrossingView.fxml">
       <provider selected="true" editor-type-id="text-editor">
@@ -684,42 +609,151 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameEngine.java">
+    <entry file="file://$PROJECT_DIR$/saved_game.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="312" column="48" lean-forward="true" selection-start-line="312" selection-start-column="48" selection-end-line="312" selection-end-column="48" />
+        <state relative-caret-position="170">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2233#3855#0" />
-            <element signature="e#3861#4179#0" />
-            <element signature="e#4290#6035#0" />
-            <element signature="e#6041#6282#0" />
-            <element signature="e#6288#9667#0" />
-            <element signature="e#11615#12083#0" />
-            <element signature="e#12089#12300#0" />
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/saved_game.xml">
+    <entry file="file://$PROJECT_DIR$/src/StartEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
+        <state relative-caret-position="85">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/32px/002-sheep-mirror.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strategies/ICrossingStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strategies/Story1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="103" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/ICrosser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/visuals/Sheep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/visuals/Farmer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="25" column="5" selection-start-line="9" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/visuals/Farmer2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strategies/Story2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="39" column="90" lean-forward="true" selection-start-line="39" selection-start-column="90" selection-end-line="39" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2335#2336#0" expanded="true" />
+            <element signature="e#2370#2371#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Crosser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/command/ICommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2010">
+          <caret line="285" column="13" selection-start-line="285" selection-start-column="13" selection-end-line="285" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/RiverCrossingController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="141" column="62" lean-forward="true" selection-start-line="141" selection-start-column="62" selection-end-line="141" selection-end-column="62" />
+        <state relative-caret-position="17">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#resetGame#0;class#RiverCrossingController#0" />
-            <element signature="method#doMove#0;class#RiverCrossingController#0" />
-            <element signature="e#3588#3589#0" expanded="true" />
-            <element signature="e#3636#3637#0" expanded="true" />
-            <element signature="e#3683#3684#0" expanded="true" />
-            <element signature="e#3718#3719#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/IRiverCrossingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/command/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+            <element signature="e#694#695#0" expanded="true" />
+            <element signature="e#717#718#0" expanded="true" />
           </folding>
         </state>
       </provider>

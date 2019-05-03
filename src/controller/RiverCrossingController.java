@@ -2,15 +2,10 @@ package controller;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
-import com.thoughtworks.xstream.security.AnyTypePermission;
-import com.thoughtworks.xstream.security.NoTypePermission;
-import com.thoughtworks.xstream.security.NullPermission;
-import com.thoughtworks.xstream.security.PrimitiveTypePermission;
 import model.ICrosser;
 import strategies.ICrossingStrategy;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
@@ -20,6 +15,7 @@ public class RiverCrossingController implements IRiverCrossingController {
 
     private List<ICrosser> rightBank;
     private List<ICrosser> leftBank;
+
     // this list is for saving and loading
     private List<ICrosser> tempCrossers;
 
@@ -113,16 +109,13 @@ public class RiverCrossingController implements IRiverCrossingController {
     @Override
     public void saveGame() {
         try {
-            FileOutputStream file = new FileOutputStream(new File("./saved_game.xml"));
+            FileOutputStream file = new FileOutputStream(new File("saved_game.xml"));
             XStream xStream = new XStream(new DomDriver());
-
 
             // this line avoids security warnings
             xStream.allowTypesByRegExp(new String[] { ".*" });
 
-
             xStream.toXML(this,file);
-
 
             file.close();
 
@@ -135,7 +128,7 @@ public class RiverCrossingController implements IRiverCrossingController {
     @Override
     public void loadGame() {
         try {
-            FileInputStream file = new FileInputStream(new File("./saved_game.xml"));
+            FileInputStream file = new FileInputStream(new File("saved_game.xml"));
             XStream xStream = new XStream(new DomDriver());
 
             // this line avoids security warnings

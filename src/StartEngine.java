@@ -1,4 +1,3 @@
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -28,7 +27,7 @@ public class StartEngine implements Initializable {
         levelList.setValue("Level 1");
     }
 
-    public void startGame(ActionEvent actionEvent) throws IOException {
+    public void startGame() throws IOException {
         GameEngine.setStrategy(getChosenLevel());
         AnchorPane root = FXMLLoader.load(getClass().getResource("resources/RiverCrossingView.fxml"));
         pane.getChildren().setAll(root);

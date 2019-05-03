@@ -48,8 +48,6 @@ How can the farmer get across the river with all the 2 animals and the plant wit
       <type>0</type>
       <label>Plant</label>
     </model.Crosser>
-  </rightBank>
-  <leftBank>
     <model.Crosser>
       <image class="model.visuals.Dog" reference="../../../strategy/initialCrossers/model.Crosser[2]/image"/>
       <weight>-1.0</weight>
@@ -57,8 +55,8 @@ How can the farmer get across the river with all the 2 animals and the plant wit
       <type>2</type>
       <label>Dog</label>
     </model.Crosser>
-  </leftBank>
-  <tempCrossers>
+  </rightBank>
+  <leftBank>
     <model.Crosser>
       <image class="model.visuals.Chicken" reference="../../../strategy/initialCrossers/model.Crosser[3]/image"/>
       <weight>-1.0</weight>
@@ -66,6 +64,8 @@ How can the farmer get across the river with all the 2 animals and the plant wit
       <type>1</type>
       <label>Chicken</label>
     </model.Crosser>
+  </leftBank>
+  <tempCrossers>
     <model.Crosser>
       <image class="model.visuals.Farmer" reference="../../../strategy/initialCrossers/model.Crosser/image"/>
       <weight>-1.0</weight>
@@ -74,6 +74,6 @@ How can the farmer get across the river with all the 2 animals and the plant wit
       <label>Farmer</label>
     </model.Crosser>
   </tempCrossers>
-  <numberOfSales>3</numberOfSales>
+  <numberOfSales>5</numberOfSales>
   <boatOnTheLeftBank>false</boatOnTheLeftBank>
 </controller.RiverCrossingController>

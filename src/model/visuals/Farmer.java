@@ -4,7 +4,6 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 
 public class Farmer implements ISprite{
 
@@ -14,6 +13,7 @@ public class Farmer implements ISprite{
         images = new BufferedImage[2];
         BufferedImage left = ImageIO.read(new File("C:\\Users\\georg\\Desktop\\River Crossing Puzzle\\src\\resources\\64px\\001-work.png"));
         BufferedImage right = ImageIO.read(new File("C:\\Users\\georg\\Desktop\\River Crossing Puzzle\\src\\resources\\64px\\001-work-mirror.png"));
+
 
         images[0] = left;
         images[1] = right;

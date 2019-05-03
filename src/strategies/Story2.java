@@ -1,13 +1,24 @@
 package strategies;
 
+import model.Crosser;
 import model.ICrosser;
+import model.visuals.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Story2 implements ICrossingStrategy {
 
-    private static Story2 ourInstance = new Story2();
+    private static Story2 ourInstance;
+
+    static {
+        try {
+            ourInstance = new Story2();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static Story2 getInstance() {
         return ourInstance;
@@ -19,23 +30,43 @@ public class Story2 implements ICrossingStrategy {
             "2. All farmers can raft, while the animal cannot."+ "\n" + "\n" +
             "How can they all get to the other side with their animal?"};
 
-    List<ICrosser> initialCrossers = new ArrayList<>();
+    private List<ICrosser> initialCrossers;
 
 
 
 
-    private Story2() {
+    private Story2() throws IOException {
+        initialCrossers = new ArrayList<>();
+        initialCrossers.add(new Crosser(new Farmer(), 90, true, Crosser.FARMER, "90 kg"));
+        initialCrossers.add(new Crosser(new Farmer2(), 60, true, Crosser.FARMER, "60 kg"));
+        initialCrossers.add(new Crosser(new Farmer(), 80, true, Crosser.FARMER, "80 kg"));
+        initialCrossers.add(new Crosser(new Farmer2(), 40, true, Crosser.FARMER, "40 kg"));
+        initialCrossers.add(new Crosser(new Sheep(), 20, false, Crosser.HERBIVOROUS, "20 kg"));
+
     }
 
     @Override
     public boolean isValid(List<ICrosser> rightBankCrossers, List<ICrosser> leftBankCrossers, List<ICrosser> boatRiders) {
-        return false;
+        double weight = 0;
+        boolean hasRider = false;
+        for (ICrosser crosser : boatRiders) {
+            weight += crosser.getWeight();
+            if (crosser.canSail()) {
+                hasRider = true;
+            }
+        }
+        return !(weight > 100) && hasRider;
     }
 
     @Override
     public List<ICrosser> getInitialCrossers() {
-        return null;
+        List<ICrosser> clonedCrossers = new ArrayList<>();
+        for (ICrosser current : initialCrossers) {
+            clonedCrossers.add(current.makeCopy());
+        }
+        return clonedCrossers;
     }
+
 
     @Override
     public String[] getInstructions() {

@@ -82,8 +82,7 @@ public class GameEngine implements Initializable {
         leftPositions.add(new Position(56, 54));
         leftPositions.add(new Position(99, 38));
         leftPositions.add(new Position(146, 25));
-        leftPositions.add(new Position(188, 1));
-        leftPositions.add(new Position(11, 12));
+        leftPositions.add(new Position(11, 4));
         leftPositions.add(new Position(71, 2));
 
         leftRaftPositions.add(new Position(167, 84));
@@ -247,6 +246,7 @@ public class GameEngine implements Initializable {
 
     private void render() {
         gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
+
         gc.drawImage(world, 0, 0);
         if (controller.isBoatOnTheLeftBank()) {
             gc.drawImage(raft, raftLeft.x, raftLeft.y);
@@ -256,15 +256,22 @@ public class GameEngine implements Initializable {
 
         for (int i = 0; i < leftBank.size(); i++) {
             gc.drawImage(SwingFXUtils.toFXImage(leftBank.get(i).getImages()[0], null),
-                    leftPositions.get(i).x - (leftBank.get(i).getEatingRank() == Crosser.FARMER ? 16.0 : 0),
-                    leftPositions.get(i).y - (leftBank.get(i).getEatingRank() == Crosser.FARMER ? 32.0 : 0));
+                    leftPositions.get(i).x - (leftBank.get(i).getEatingRank() == Crosser.FARMER && i < 4 ? 16.0 : 0),
+                    leftPositions.get(i).y - (leftBank.get(i).getEatingRank() == Crosser.FARMER && i < 4 ? 32.0 : 0));
 
+            gc.fillText(leftBank.get(i).getLabelToBeShown(),
+                    leftPositions.get(i).x ,
+                    leftPositions.get(i).y + 40 + (leftBank.get(i).getEatingRank() == Crosser.FARMER && i > 4 ? 16 : 0));
         }
 
         for (int i = 0; i < rightBank.size(); i++) {
             gc.drawImage(SwingFXUtils.toFXImage(rightBank.get(i).getImages()[1], null),
                     rightPositions.get(i).x - (rightBank.get(i).getEatingRank() == Crosser.FARMER ? 16.0 : 0),
                     rightPositions.get(i).y - (rightBank.get(i).getEatingRank() == Crosser.FARMER ? 32.0 : 0));
+
+            gc.fillText(rightBank.get(i).getLabelToBeShown(),
+                    rightPositions.get(i).x ,
+                    rightPositions.get(i).y + 40 + (rightBank.get(i).getEatingRank() == Crosser.FARMER && i > 4 ? 16 : 0));
         }
 
         if (controller.isBoatOnTheLeftBank()) {
@@ -272,12 +279,20 @@ public class GameEngine implements Initializable {
                 gc.drawImage(SwingFXUtils.toFXImage(crossers.get(i).getImages()[0], null),
                         leftRaftPositions.get(i).x - (crossers.get(i).getEatingRank() == Crosser.FARMER ? 16.0 : 0),
                         leftRaftPositions.get(i).y - (crossers.get(i).getEatingRank() == Crosser.FARMER ? 32.0 : 0));
+
+                gc.fillText(crossers.get(i).getLabelToBeShown(),
+                        leftRaftPositions.get(i).x ,
+                        leftRaftPositions.get(i).y + 40 + (crossers.get(i).getEatingRank() == Crosser.FARMER && i > 4 ? 16 : 0));
             }
         } else {
             for (int i = 0; i < crossers.size(); i++) {
                 gc.drawImage(SwingFXUtils.toFXImage(crossers.get(i).getImages()[1], null),
                         rightRaftPositions.get(i).x - (crossers.get(i).getEatingRank() == Crosser.FARMER ? 16.0 : 0),
                         rightRaftPositions.get(i).y - (crossers.get(i).getEatingRank() == Crosser.FARMER ? 32.0 : 0));
+
+                gc.fillText(crossers.get(i).getLabelToBeShown(),
+                        rightRaftPositions.get(i).x ,
+                        rightRaftPositions.get(i).y + 40 + (crossers.get(i).getEatingRank() == Crosser.FARMER && i > 4 ? 16 : 0));
             }
         }
 
@@ -306,11 +321,14 @@ public class GameEngine implements Initializable {
     public void saveGame() {
         controller.setTempCrossers(crossers);
         controller.saveGame();
+        message.setText("Saved game successfully!");
     }
 
     public void loadGame() {
+        move.setDisable(false);
         controller.loadGame();
         crossers = controller.getTempCrossers();
+        message.setText("Loaded game successfully!");
         update();
         render();
     }

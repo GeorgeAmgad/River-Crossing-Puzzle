@@ -27,6 +27,8 @@ public class Story1 implements ICrossingStrategy {
         return ourInstance;
     }
 
+    // TODO: 4/29/2019 add level name in position [0] and fetch it inside the engine
+
     private String[] Instructions = {"“ A farmer wants to cross a river and take with him a dog, a chicken and a basket of veggies.” " + "\n" + "\n" +
             "1. The farmer is the only one who can sail the boat. He can only take one passenger, in addition to himself. " + "\n" +
             "2. The dog can harm the chicken and the chicken can eat the veggies " + "\n" +
