@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class Dog implements ISprite {
 
-    private static BufferedImage[] images;
+    private BufferedImage[] images;
 
     public Dog() throws IOException {
         images = new BufferedImage[2];

@@ -1,6 +1,7 @@
 <controller.RiverCrossingController>
   <strategy class="strategies.Story1">
     <Instructions>
+      <string>1</string>
       <string>“ A farmer wants to cross a river and take with him a dog, a chicken and a basket of veggies.” 
 
 1. The farmer is the only one who can sail the boat. He can only take one passenger, in addition to himself. 
@@ -11,28 +12,1578 @@ How can the farmer get across the river with all the 2 animals and the plant wit
     </Instructions>
     <initialCrossers>
       <model.Crosser>
-        <image class="model.visuals.Farmer"/>
+        <image class="model.visuals.Farmer">
+          <images>
+            <java.awt.image.BufferedImage>
+              <accelerationPriority>0.5</accelerationPriority>
+              <surfaceManager class="sun.awt.image.BufImgSurfaceManager">
+                <bImg reference="../.."/>
+                <sdDefault class="sun.awt.image.BufImgSurfaceData">
+                  <pData>437233264</pData>
+                  <valid>true</valid>
+                  <surfaceLost>false</surfaceLost>
+                  <surfaceType>
+                    <uniqueID>14</uniqueID>
+                    <desc>4 Byte ABGR</desc>
+                    <next>
+                      <uniqueID>7</uniqueID>
+                      <desc>Any 4 Byte Component</desc>
+                      <next>
+                        <uniqueID>1</uniqueID>
+                        <desc>Any Surface</desc>
+                        <pixelConverter>
+                          <alphaMask>0</alphaMask>
+                        </pixelConverter>
+                      </next>
+                      <pixelConverter reference="../next/pixelConverter"/>
+                    </next>
+                    <pixelConverter class="sun.awt.image.PixelConverter$Rgba">
+                      <alphaMask>255</alphaMask>
+                    </pixelConverter>
+                  </surfaceType>
+                  <colorModel class="java.awt.image.ComponentColorModel">
+                    <pData>0</pData>
+                    <pixel__bits>32</pixel__bits>
+                    <nBits>
+                      <int>8</int>
+                      <int>8</int>
+                      <int>8</int>
+                      <int>8</int>
+                    </nBits>
+                    <transparency>3</transparency>
+                    <supportsAlpha>true</supportsAlpha>
+                    <isAlphaPremultiplied>false</isAlphaPremultiplied>
+                    <numComponents>4</numComponents>
+                    <numColorComponents>3</numColorComponents>
+                    <colorSpace class="java.awt.color.ICC_ColorSpace">
+                      <type>5</type>
+                      <numComponents>3</numComponents>
+                      <thisProfile class="java.awt.color.ICC_ProfileRGB" serialization="custom">
+                        <java.awt.color.ICC__Profile>
+                          <default>
+                            <iccProfileSerializedDataVersion>1</iccProfileSerializedDataVersion>
+                          </default>
+                          <string>CS_sRGB</string>
+                          <null/>
+                        </java.awt.color.ICC__Profile>
+                      </thisProfile>
+                      <minVal>
+                        <float>0.0</float>
+                        <float>0.0</float>
+                        <float>0.0</float>
+                      </minVal>
+                      <maxVal>
+                        <float>1.0</float>
+                        <float>1.0</float>
+                        <float>1.0</float>
+                      </maxVal>
+                      <needScaleInit>true</needScaleInit>
+                    </colorSpace>
+                    <colorSpaceType>5</colorSpaceType>
+                    <maxBits>8</maxBits>
+                    <is__sRGB>true</is__sRGB>
+                    <transferType>0</transferType>
+                    <signed>false</signed>
+                    <is__sRGB__stdScale>true</is__sRGB__stdScale>
+                    <is__LinearRGB__stdScale>false</is__LinearRGB__stdScale>
+                    <is__LinearGray__stdScale>false</is__LinearGray__stdScale>
+                    <is__ICCGray__stdScale>false</is__ICCGray__stdScale>
+                    <needScaleInit>true</needScaleInit>
+                    <noUnnorm>false</noUnnorm>
+                    <nonStdScale>false</nonStdScale>
+                  </colorModel>
+                  <disposerReferent/>
+                  <stateDelegate>
+                    <theState>STABLE</theState>
+                    <numDynamicAgents>0</numDynamicAgents>
+                  </stateDelegate>
+                  <haveLCDLoop>0</haveLCDLoop>
+                  <havePgramXORLoop>0</havePgramXORLoop>
+                  <havePgramSolidLoop>0</havePgramSolidLoop>
+                  <bufImg reference="../../.."/>
+                  <solidloops>
+                    <drawLineLoop>
+                      <methodSignature>DrawLine(...)</methodSignature>
+                      <uniqueID>34017316</uniqueID>
+                      <sourceType>
+                        <uniqueID>36</uniqueID>
+                        <desc>Single Color</desc>
+                        <next>
+                          <uniqueID>35</uniqueID>
+                          <desc>Paint Object</desc>
+                          <next reference="../../../../../surfaceType/next/next"/>
+                          <pixelConverter reference="../../../../../surfaceType/next/next/pixelConverter"/>
+                        </next>
+                        <pixelConverter reference="../../../../surfaceType/next/next/pixelConverter"/>
+                      </sourceType>
+                      <compositeType>
+                        <uniqueID>16</uniqueID>
+                        <desc>Porter-Duff Src, No Extra Alpha</desc>
+                        <next>
+                          <uniqueID>5</uniqueID>
+                          <desc>Porter-Duff Src</desc>
+                          <next>
+                            <uniqueID>2</uniqueID>
+                            <desc>Any AlphaComposite Rule</desc>
+                            <next>
+                              <uniqueID>1</uniqueID>
+                              <desc>Any CompositeContext</desc>
+                            </next>
+                          </next>
+                        </next>
+                      </compositeType>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721034144</pNativePrim>
+                    </drawLineLoop>
+                    <fillRectLoop>
+                      <methodSignature>FillRect(...)</methodSignature>
+                      <uniqueID>101126180</uniqueID>
+                      <sourceType reference="../../drawLineLoop/sourceType"/>
+                      <compositeType reference="../../drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721033920</pNativePrim>
+                    </fillRectLoop>
+                    <drawRectLoop>
+                      <methodSignature>DrawRect(...)</methodSignature>
+                      <uniqueID>168235044</uniqueID>
+                      <sourceType reference="../../drawLineLoop/sourceType"/>
+                      <compositeType reference="../../drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721034200</pNativePrim>
+                    </drawRectLoop>
+                    <drawPolygonsLoop>
+                      <methodSignature>DrawPolygons(...)</methodSignature>
+                      <uniqueID>185012260</uniqueID>
+                      <sourceType reference="../../drawLineLoop/sourceType"/>
+                      <compositeType reference="../../drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721034256</pNativePrim>
+                    </drawPolygonsLoop>
+                    <drawPathLoop>
+                      <methodSignature>DrawPath(...)</methodSignature>
+                      <uniqueID>201789476</uniqueID>
+                      <sourceType reference="../../drawLineLoop/sourceType"/>
+                      <compositeType reference="../../drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721034312</pNativePrim>
+                    </drawPathLoop>
+                    <fillPathLoop>
+                      <methodSignature>FillPath(...)</methodSignature>
+                      <uniqueID>218566692</uniqueID>
+                      <sourceType reference="../../drawLineLoop/sourceType"/>
+                      <compositeType reference="../../drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721034368</pNativePrim>
+                    </fillPathLoop>
+                    <fillSpansLoop>
+                      <methodSignature>FillSpans(...)</methodSignature>
+                      <uniqueID>117903396</uniqueID>
+                      <sourceType reference="../../drawLineLoop/sourceType"/>
+                      <compositeType reference="../../drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721033976</pNativePrim>
+                    </fillSpansLoop>
+                    <fillParallelogramLoop>
+                      <methodSignature>FillParallelogram(...)</methodSignature>
+                      <uniqueID>134680612</uniqueID>
+                      <sourceType reference="../../drawLineLoop/sourceType"/>
+                      <compositeType reference="../../drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721034032</pNativePrim>
+                    </fillParallelogramLoop>
+                    <drawParallelogramLoop>
+                      <methodSignature>DrawParallelogram(...)</methodSignature>
+                      <uniqueID>151457828</uniqueID>
+                      <sourceType reference="../../drawLineLoop/sourceType"/>
+                      <compositeType reference="../../drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721034088</pNativePrim>
+                    </drawParallelogramLoop>
+                    <drawGlyphListLoop>
+                      <methodSignature>DrawGlyphList(...)</methodSignature>
+                      <uniqueID>268898340</uniqueID>
+                      <sourceType reference="../../drawLineLoop/sourceType"/>
+                      <compositeType reference="../../drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721034816</pNativePrim>
+                    </drawGlyphListLoop>
+                    <drawGlyphListAALoop>
+                      <methodSignature>DrawGlyphListAA(...)</methodSignature>
+                      <uniqueID>286134308</uniqueID>
+                      <sourceType reference="../../drawLineLoop/sourceType"/>
+                      <compositeType reference="../../drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType"/>
+                      <pNativePrim>1721049400</pNativePrim>
+                    </drawGlyphListAALoop>
+                    <drawGlyphListLCDLoop>
+                      <methodSignature>DrawGlyphListLCD(...)</methodSignature>
+                      <uniqueID>302911524</uniqueID>
+                      <sourceType reference="../../drawLineLoop/sourceType"/>
+                      <compositeType reference="../../drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType"/>
+                      <pNativePrim>1721049456</pNativePrim>
+                    </drawGlyphListLCDLoop>
+                  </solidloops>
+                </sdDefault>
+              </surfaceManager>
+              <imageType>6</imageType>
+              <colorModel class="java.awt.image.ComponentColorModel" reference="../surfaceManager/sdDefault/colorModel"/>
+              <raster class="sun.awt.image.ByteInterleavedRaster">
+                <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+                  <width>64</width>
+                  <height>64</height>
+                  <numBands defined-in="java.awt.image.SampleModel">4</numBands>
+                  <dataType>0</dataType>
+                  <bandOffsets>
+                    <int>3</int>
+                    <int>2</int>
+                    <int>1</int>
+                    <int>0</int>
+                  </bandOffsets>
+                  <bankIndices>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                  </bankIndices>
+                  <numBands>4</numBands>
+                  <numBanks>1</numBanks>
+                  <scanlineStride>256</scanlineStride>
+                  <pixelStride>4</pixelStride>
+                </sampleModel>
+                <dataBuffer class="java.awt.image.DataBufferByte">
+                  <dataType>0</dataType>
+                  <banks>1</banks>
+                  <offset>0</offset>
+                  <size>16384</size>
+                  <offsets>
+                    <int>0</int>
+                  </offsets>
+                  <theTrackable reference="../../../surfaceManager/sdDefault/stateDelegate"/>
+                  <data>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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACO9kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiyMv5IsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJxo45/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5IsbL+SLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO6/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is0cCSLPe/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLEO+kS4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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</data>
+                  <bankdata>
+                    <byte-array reference="../../data"/>
+                  </bankdata>
+                </dataBuffer>
+                <minX>0</minX>
+                <minY>0</minY>
+                <width>64</width>
+                <height>64</height>
+                <sampleModelTranslateX>0</sampleModelTranslateX>
+                <sampleModelTranslateY>0</sampleModelTranslateY>
+                <numBands>4</numBands>
+                <numDataElements>4</numDataElements>
+                <theTrackable reference="../../surfaceManager/sdDefault/stateDelegate"/>
+                <bandOffset>3</bandOffset>
+                <dataOffsets>
+                  <int>3</int>
+                  <int>2</int>
+                  <int>1</int>
+                  <int>0</int>
+                </dataOffsets>
+                <scanlineStride>256</scanlineStride>
+                <pixelStride>4</pixelStride>
+                <data reference="../dataBuffer/data"/>
+                <type>1</type>
+                <maxX defined-in="sun.awt.image.ByteComponentRaster">64</maxX>
+                <maxY defined-in="sun.awt.image.ByteComponentRaster">64</maxY>
+                <inOrder>false</inOrder>
+                <dbOffset>0</dbOffset>
+                <dbOffsetPacked>0</dbOffsetPacked>
+                <packed>false</packed>
+                <maxX>64</maxX>
+                <maxY>64</maxY>
+              </raster>
+            </java.awt.image.BufferedImage>
+            <java.awt.image.BufferedImage>
+              <accelerationPriority>0.5</accelerationPriority>
+              <surfaceManager class="sun.awt.image.BufImgSurfaceManager">
+                <bImg reference="../.."/>
+                <sdDefault class="sun.awt.image.BufImgSurfaceData">
+                  <pData>437253104</pData>
+                  <valid>true</valid>
+                  <surfaceLost>false</surfaceLost>
+                  <surfaceType reference="../../../../java.awt.image.BufferedImage/surfaceManager/sdDefault/surfaceType"/>
+                  <colorModel class="java.awt.image.ComponentColorModel" reference="../../../../java.awt.image.BufferedImage/surfaceManager/sdDefault/colorModel"/>
+                  <disposerReferent/>
+                  <stateDelegate>
+                    <theState>STABLE</theState>
+                    <numDynamicAgents>0</numDynamicAgents>
+                  </stateDelegate>
+                  <haveLCDLoop>0</haveLCDLoop>
+                  <havePgramXORLoop>0</havePgramXORLoop>
+                  <havePgramSolidLoop>0</havePgramSolidLoop>
+                  <bufImg reference="../../.."/>
+                  <solidloops reference="../../../../java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops"/>
+                </sdDefault>
+              </surfaceManager>
+              <imageType>6</imageType>
+              <colorModel class="java.awt.image.ComponentColorModel" reference="../../java.awt.image.BufferedImage/surfaceManager/sdDefault/colorModel"/>
+              <raster class="sun.awt.image.ByteInterleavedRaster">
+                <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+                  <width>64</width>
+                  <height>64</height>
+                  <numBands defined-in="java.awt.image.SampleModel">4</numBands>
+                  <dataType>0</dataType>
+                  <bandOffsets>
+                    <int>3</int>
+                    <int>2</int>
+                    <int>1</int>
+                    <int>0</int>
+                  </bandOffsets>
+                  <bankIndices>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                  </bankIndices>
+                  <numBands>4</numBands>
+                  <numBanks>1</numBanks>
+                  <scanlineStride>256</scanlineStride>
+                  <pixelStride>4</pixelStride>
+                </sampleModel>
+                <dataBuffer class="java.awt.image.DataBufferByte">
+                  <dataType>0</dataType>
+                  <banks>1</banks>
+                  <offset>0</offset>
+                  <size>16384</size>
+                  <offsets>
+                    <int>0</int>
+                  </offsets>
+                  <theTrackable reference="../../../surfaceManager/sdDefault/stateDelegate"/>
+                  <data>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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjL+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLCO9kiwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGy/ki3/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiwJxo45AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABDvpEu/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz3v5Is0cCSLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kizuv5IsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGL+VK/+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is8L+SLG6+kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Isz7+TLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvpIs/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLPC/kixWvpEs/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLK+/kiwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH/AABwmV0r+rF+LP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kizwv5IsP76SLf+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiyOvpErAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACHmV0r/5ldK/+cYSv/t4gs/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is9L6QLSe+kC7/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5IsbcCRLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAknFwr/ZldK/+ZXSv/mV0r/5thK/+teiz/vpAs/7+SLP+/kiz/v5Is/7eGK+qmbywPu5kz/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLE3AkisAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYJpdK/+ZXSv/mV0r/5ldK/+ZXSv/mV0r/5tfK/+gZiz/n2Ur/5tfK/KZXStfmV4rAAAAAPa/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiwtwZMtAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF6YXCv/mV0r/5ldK/+ZXSv/mV0r/5ldK/+ZXSv/mV0r/pldK6CZXCsZmVwpAAAAAAAAAADfv5Ir/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz9vpIsC7mLLgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUmVkm6ZldK/+ZXSv/mV0r/5ldK/+ZXSv/mV0ryJldKzaXXisAAAAAAAAAAAAAAAAAAAAAxcCSLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is2cCSKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB+cWimOmV0rzJldK9iZXSuymV0rUphdLAH/AAAAAAAAAAAAAAAAAAAAAAAAGJVgK+C1hCz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLKnAkiwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF5tZLN6ZXSv/o2or/76RLP+/kiz/v5Is/7+SLP+/kiz/v5Is/7+SLP+/kiyKuYwsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ2ZXSr/mV0r/5ldK/+jayv/toYs/7+RLP+/kiz/v5Is/7+SLP++kSz/tIIsbaFpKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADimV0r/5ldK/+ZXSv/mV0r/5ldK/+cYSv/omks/6RtK/+haSv/m18r0pleKxiVYCsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5pldK/+ZXSv/mV0r/5ldK/+ZXSv/mV0r/5ldK/+ZXSvumV0rbZheKgSAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJWYXCv/mV0r/5ldK/+ZXSv/mV0r/5ldK/yZXSuWmV4rE5ReKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFmWYzdZleLNCZXSv2mV0r45ldK5+YXSstmVstAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</data>
+                  <bankdata>
+                    <byte-array reference="../../data"/>
+                  </bankdata>
+                </dataBuffer>
+                <minX>0</minX>
+                <minY>0</minY>
+                <width>64</width>
+                <height>64</height>
+                <sampleModelTranslateX>0</sampleModelTranslateX>
+                <sampleModelTranslateY>0</sampleModelTranslateY>
+                <numBands>4</numBands>
+                <numDataElements>4</numDataElements>
+                <theTrackable reference="../../surfaceManager/sdDefault/stateDelegate"/>
+                <bandOffset>3</bandOffset>
+                <dataOffsets>
+                  <int>3</int>
+                  <int>2</int>
+                  <int>1</int>
+                  <int>0</int>
+                </dataOffsets>
+                <scanlineStride>256</scanlineStride>
+                <pixelStride>4</pixelStride>
+                <data reference="../dataBuffer/data"/>
+                <type>1</type>
+                <maxX defined-in="sun.awt.image.ByteComponentRaster">64</maxX>
+                <maxY defined-in="sun.awt.image.ByteComponentRaster">64</maxY>
+                <inOrder>false</inOrder>
+                <dbOffset>0</dbOffset>
+                <dbOffsetPacked>0</dbOffsetPacked>
+                <packed>false</packed>
+                <maxX>64</maxX>
+                <maxY>64</maxY>
+              </raster>
+            </java.awt.image.BufferedImage>
+          </images>
+        </image>
         <weight>-1.0</weight>
         <canSail>true</canSail>
         <type>3</type>
         <label>Farmer</label>
       </model.Crosser>
       <model.Crosser>
-        <image class="model.visuals.Dog"/>
+        <image class="model.visuals.Dog">
+          <images>
+            <java.awt.image.BufferedImage>
+              <accelerationPriority>0.5</accelerationPriority>
+              <surfaceManager class="sun.awt.image.BufImgSurfaceManager">
+                <bImg reference="../.."/>
+                <sdDefault class="sun.awt.image.BufImgSurfaceData">
+                  <pData>437234160</pData>
+                  <valid>true</valid>
+                  <surfaceLost>false</surfaceLost>
+                  <surfaceType reference="../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/surfaceType"/>
+                  <colorModel class="java.awt.image.ComponentColorModel" reference="../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/colorModel"/>
+                  <disposerReferent/>
+                  <stateDelegate>
+                    <theState>STABLE</theState>
+                    <numDynamicAgents>0</numDynamicAgents>
+                  </stateDelegate>
+                  <haveLCDLoop>0</haveLCDLoop>
+                  <havePgramXORLoop>0</havePgramXORLoop>
+                  <havePgramSolidLoop>0</havePgramSolidLoop>
+                  <bufImg reference="../../.."/>
+                  <solidloops reference="../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops"/>
+                </sdDefault>
+              </surfaceManager>
+              <imageType>6</imageType>
+              <colorModel class="java.awt.image.ComponentColorModel" reference="../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/colorModel"/>
+              <raster class="sun.awt.image.ByteInterleavedRaster">
+                <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+                  <width>32</width>
+                  <height>32</height>
+                  <numBands defined-in="java.awt.image.SampleModel">4</numBands>
+                  <dataType>0</dataType>
+                  <bandOffsets>
+                    <int>3</int>
+                    <int>2</int>
+                    <int>1</int>
+                    <int>0</int>
+                  </bandOffsets>
+                  <bankIndices>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                  </bankIndices>
+                  <numBands>4</numBands>
+                  <numBanks>1</numBanks>
+                  <scanlineStride>128</scanlineStride>
+                  <pixelStride>4</pixelStride>
+                </sampleModel>
+                <dataBuffer class="java.awt.image.DataBufferByte">
+                  <dataType>0</dataType>
+                  <banks>1</banks>
+                  <offset>0</offset>
+                  <size>4096</size>
+                  <offsets>
+                    <int>0</int>
+                  </offsets>
+                  <theTrackable reference="../../../surfaceManager/sdDefault/stateDelegate"/>
+                  <data>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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaO2fr/j9v4/4/b+P+P2/j/j9v4FZLb8wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6r//+mP2/j/j9v4/4/b+OGP2/gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgI/b9/+P2/j/j9v4fY/a+QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGgNX/i4/a+HmP2/kEgL//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</data>
+                  <bankdata>
+                    <byte-array reference="../../data"/>
+                  </bankdata>
+                </dataBuffer>
+                <minX>0</minX>
+                <minY>0</minY>
+                <width>32</width>
+                <height>32</height>
+                <sampleModelTranslateX>0</sampleModelTranslateX>
+                <sampleModelTranslateY>0</sampleModelTranslateY>
+                <numBands>4</numBands>
+                <numDataElements>4</numDataElements>
+                <theTrackable reference="../../surfaceManager/sdDefault/stateDelegate"/>
+                <bandOffset>3</bandOffset>
+                <dataOffsets>
+                  <int>3</int>
+                  <int>2</int>
+                  <int>1</int>
+                  <int>0</int>
+                </dataOffsets>
+                <scanlineStride>128</scanlineStride>
+                <pixelStride>4</pixelStride>
+                <data reference="../dataBuffer/data"/>
+                <type>1</type>
+                <maxX defined-in="sun.awt.image.ByteComponentRaster">32</maxX>
+                <maxY defined-in="sun.awt.image.ByteComponentRaster">32</maxY>
+                <inOrder>false</inOrder>
+                <dbOffset>0</dbOffset>
+                <dbOffsetPacked>0</dbOffsetPacked>
+                <packed>false</packed>
+                <maxX>32</maxX>
+                <maxY>32</maxY>
+              </raster>
+            </java.awt.image.BufferedImage>
+            <java.awt.image.BufferedImage>
+              <accelerationPriority>0.5</accelerationPriority>
+              <imageType>13</imageType>
+              <colorModel class="java.awt.image.IndexColorModel">
+                <pData>0</pData>
+                <pixel__bits>8</pixel__bits>
+                <nBits>
+                  <int>8</int>
+                  <int>8</int>
+                  <int>8</int>
+                  <int>8</int>
+                </nBits>
+                <transparency>3</transparency>
+                <supportsAlpha>true</supportsAlpha>
+                <isAlphaPremultiplied>false</isAlphaPremultiplied>
+                <numComponents>4</numComponents>
+                <numColorComponents>3</numColorComponents>
+                <colorSpace class="java.awt.color.ICC_ColorSpace" reference="../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/colorModel/colorSpace"/>
+                <colorSpaceType>5</colorSpaceType>
+                <maxBits>8</maxBits>
+                <is__sRGB>true</is__sRGB>
+                <transferType>0</transferType>
+                <rgb>
+                  <int>0</int>
+                  <int>41975808</int>
+                  <int>-1950528739</int>
+                  <int>331108635</int>
+                  <int>165900629</int>
+                  <int>1054248022</int>
+                  <int>802786641</int>
+                  <int>111826219</int>
+                  <int>33488896</int>
+                  <int>-1849930722</int>
+                  <int>649873947</int>
+                  <int>215323989</int>
+                  <int>-1747615159</int>
+                  <int>-221813454</int>
+                  <int>-506761414</int>
+                  <int>-792570586</int>
+                  <int>-54703330</int>
+                  <int>298011422</int>
+                  <int>-2083092402</int>
+                  <int>-87728851</int>
+                  <int>-1463923426</int>
+                  <int>754177675</int>
+                  <int>-355766983</int>
+                  <int>-338989768</int>
+                  <int>182884685</int>
+                  <int>150986624</int>
+                  <int>-1913070705</int>
+                  <int>-67576945</int>
+                  <int>-942572732</int>
+                  <int>821746319</int>
+                  <int>-705111154</int>
+                  <int>903119432</int>
+                  <int>251653558</int>
+                  <int>1190715040</int>
+                  <int>-2032428961</int>
+                  <int>1876926821</int>
+                  <int>333753963</int>
+                  <int>218092949</int>
+                  <int>2147081103</int>
+                  <int>-134685808</int>
+                  <int>-1076855997</int>
+                  <int>184542873</int>
+                  <int>-1191252314</int>
+                  <int>-33622867</int>
+                  <int>-36205741</int>
+                  <int>-68039290</int>
+                  <int>-171482063</int>
+                  <int>670619792</int>
+                  <int>-419633252</int>
+                  <int>-20818650</int>
+                  <int>401923728</int>
+                  <int>-487007345</int>
+                  <int>-18635163</int>
+                  <int>-1560683633</int>
+                  <int>134208402</int>
+                  <int>-302523505</int>
+                  <int>1392306594</int>
+                  <int>-923149425</int>
+                  <int>-369168217</int>
+                  <int>-1527260273</int>
+                  <int>-16780115</int>
+                  <int>-2131240049</int>
+                  <int>-16845908</int>
+                  <int>1542970255</int>
+                  <int>-906170460</int>
+                  <int>-386344049</int>
+                  <int>-34022513</int>
+                  <int>938924688</int>
+                  <int>268431001</int>
+                  <int>-486675034</int>
+                  <int>-168240241</int>
+                  <int>1291377296</int>
+                  <int>201314699</int>
+                  <int>553113487</int>
+                  <int>-654779249</int>
+                  <int>334682004</int>
+                  <int>50331647</int>
+                  <int>-1174475612</int>
+                  <int>1744362128</int>
+                  <int>1174137247</int>
+                  <int>-318902361</int>
+                  <int>-1778852976</int>
+                  <int>-906503281</int>
+                  <int>50331520</int>
+                  <int>-17112424</int>
+                  <int>-1426531441</int>
+                  <int>83869568</int>
+                  <int>-1292313713</int>
+                  <int>-1896293488</int>
+                  <int>-604380519</int>
+                  <int>-1862406749</int>
+                  <int>-1929516638</int>
+                  <int>-1023746157</int>
+                  <int>1912134542</int>
+                  <int>1777916815</int>
+                  <int>1996085903</int>
+                  <int>167764878</int>
+                  <int>1928911759</int>
+                  <int>-537338737</int>
+                  <int>-1392977010</int>
+                  <int>1526323854</int>
+                  <int>1392106127</int>
+                  <int>-1007101297</int>
+                  <int>1274600079</int>
+                  <int>-352789617</int>
+                  <int>1257823629</int>
+                  <int>-1694966898</int>
+                  <int>1157159567</int>
+                  <int>788127376</int>
+                  <int>838523789</int>
+                  <int>1794694030</int>
+                  <int>368302994</int>
+                  <int>922409358</int>
+                  <int>-503784561</int>
+                  <int>-369566833</int>
+                  <int>67108778</int>
+                  <int>2113526415</int>
+                  <int>2046417807</int>
+                  <int>-1946625393</int>
+                  <int>117429632</int>
+                  <int>-4371682</int>
+                  <int>-4305376</int>
+                  <int>-4238813</int>
+                  <int>-2055839</int>
+                  <int>-468081</int>
+                  <int>-2651312</int>
+                  <int>-4239583</int>
+                  <int>-533874</int>
+                  <int>-2849718</int>
+                  <int>-929136</int>
+                  <int>-4106970</int>
+                  <int>-468338</int>
+                  <int>-2453163</int>
+                  <int>-4371425</int>
+                  <int>-2642</int>
+                  <int>-1591430</int>
+                  <int>-4040920</int>
+                  <int>-1128575</int>
+                  <int>-1592978</int>
+                  <int>-4040408</int>
+                  <int>-69464</int>
+                  <int>-1922193</int>
+                  <int>-267612</int>
+                  <int>-599664</int>
+                  <int>-666230</int>
+                  <int>-2056096</int>
+                  <int>-3776209</int>
+                  <int>-3577289</int>
+                  <int>-401774</int>
+                  <int>-1922449</int>
+                  <int>-3643851</int>
+                  <int>-333405</int>
+                  <int>-467824</int>
+                  <int>-997248</int>
+                  <int>-1658771</int>
+                  <int>-1791127</int>
+                  <int>-1526672</int>
+                  <int>-799355</int>
+                  <int>-268130</int>
+                  <int>-331347</int>
+                  <int>-6972542</int>
+                  <int>-1723530</int>
+                  <int>-3378369</int>
+                  <int>-268387</int>
+                  <int>-401259</int>
+                  <int>-2899</int>
+                  <int>-7103871</int>
+                  <int>-995955</int>
+                  <int>-3643594</int>
+                  <int>-69206</int>
+                  <int>-467568</int>
+                  <int>-68436</int>
+                  <int>-726102</int>
+                  <int>-199763</int>
+                  <int>-134998</int>
+                  <int>-7191510</int>
+                  <int>-7781587</int>
+                  <int>-4239069</int>
+                  <int>-135255</int>
+                  <int>-268644</int>
+                  <int>-10983832</int>
+                  <int>-12430498</int>
+                  <int>-134226</int>
+                  <int>-2253212</int>
+                  <int>-5158878</int>
+                  <int>-7584981</int>
+                  <int>-1260411</int>
+                  <int>-135514</int>
+                  <int>-5854583</int>
+                  <int>-7235711</int>
+                  <int>-68949</int>
+                  <int>-2981812</int>
+                  <int>-3114169</int>
+                  <int>-6446459</int>
+                  <int>-1317722</int>
+                  <int>-863599</int>
+                  <int>-1922706</int>
+                  <int>-2848943</int>
+                  <int>-3974100</int>
+                  <int>-1459331</int>
+                  <int>-135257</int>
+                  <int>-5197427</int>
+                  <int>-7302788</int>
+                  <int>-11185057</int>
+                  <int>-1449564</int>
+                  <int>-68435</int>
+                  <int>-1127798</int>
+                  <int>-2451875</int>
+                  <int>-467823</int>
+                  <int>-1067892</int>
+                  <int>-2480317</int>
+                  <int>-8954526</int>
+                  <int>-4868465</int>
+                  <int>-2369633</int>
+                  <int>-70743</int>
+                  <int>-1159080</int>
+                  <int>-1467778</int>
+                  <int>-2895717</int>
+                  <int>-331604</int>
+                  <int>-136028</int>
+                  <int>-135515</int>
+                  <int>-401516</int>
+                  <int>-467567</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                  <int>-16777216</int>
+                </rgb>
+                <map__size>256</map__size>
+                <pixel__mask>255</pixel__mask>
+                <transparent__index>0</transparent__index>
+                <allgrayopaque>false</allgrayopaque>
+                <lookupcache>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                </lookupcache>
+              </colorModel>
+              <raster class="sun.awt.image.ByteInterleavedRaster">
+                <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+                  <width>32</width>
+                  <height>32</height>
+                  <numBands defined-in="java.awt.image.SampleModel">1</numBands>
+                  <dataType>0</dataType>
+                  <bandOffsets>
+                    <int>0</int>
+                  </bandOffsets>
+                  <bankIndices>
+                    <int>0</int>
+                  </bankIndices>
+                  <numBands>1</numBands>
+                  <numBanks>1</numBanks>
+                  <scanlineStride>32</scanlineStride>
+                  <pixelStride>1</pixelStride>
+                </sampleModel>
+                <dataBuffer class="java.awt.image.DataBufferByte">
+                  <dataType>0</dataType>
+                  <banks>1</banks>
+                  <offset>0</offset>
+                  <size>1024</size>
+                  <offsets>
+                    <int>0</int>
+                  </offsets>
+                  <theTrackable>
+                    <theState>STABLE</theState>
+                    <numDynamicAgents>0</numDynamicAgents>
+                  </theTrackable>
+                  <data>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAUGBwAICXgKAAAAAAAAAAAAAAAAAAAAAAAAAAALDA15eHh6Dg94EBEAAAAAAAAAAAAAAAAAAAAAAAAAEhN4eHh4eHh4eHgUAAAAAAAAAAAAAAAAAAAAAAAAFRZ4eHh4eHh4eHh4eBcYAAAAAAAAAAAAAAAAAAAAGRobe3h4eHh4eHh4eHh4eBwAAAAAAAAAAAAAAAAAAB0efHx8fXh4eHh4eHh4eHh4fh8AAAAAACAhIiMkACUmJ3x8fHx/gHh4eHh4eHh4eHh4KAAAACkqK4F4eIIsLXx8fHx8fHyDhIV4eHh4eHh4eHguAAAvMIaGh3h4eHiIiXx8fHx8fHx8iot4eHh4eHh4eDEAMjOMhoaNeHh4eH6Oj3x8fHx8fHx8kJGSeHh4eIWTNAA1lIaGhpV4eHh4loaXmHx8fHx8fHx8fHyZmpucnXx8Nieen6CGoXh4eHiihoajfHx8fHx8fHx8fHx8fHx8fHwypKWGpoaneHh4eKiGhqmqfHx8fHx8fHx8fHx8fHx8Nzirhoasra6Ir7B4sbKGhrN8fHx8fHx8fHx8fHx8fHw5OoaGhrS1tre4uXh4uoaGu3x8fHx8fHx8fHx8fHx8fDs8hoaGvL2Gvr94eHjAhoa+fHx8fHx8fHx8fHx8fHx8PT6GhobBwoaGhsPExcbHhsh8fHx8fHx8fHx8fHx8fHw/QIbJysvMhoaGhoaGzc7P0Hx8fHx8fHwbQUJ8fHx8fENERYbR0tPU1YaGhoaGhrt8fHx8fHxGR0gASUp8fHx8SwBMTdbX2NnahoaGhoaG23x8fHx8fE4AAAAAP3x8fDcAAAAAT1CGhoaGhoaGhqWkfHx8fHxRAAAAAABJfHx8UgAAAAAAU1TchoaGhoa73Xx8fHx8VVYAAAAAAABXfHxYAAAAAAAAJ3zeWVpbXHx8fHx8G11TAAAAAAAAADZeX2AAAAAAAABKfHxRAAAAYXx8fHxiAAAAAAAAAAAAAAAAAAAAAAAAAGN8fGQAAABlfHx8fGYAAAAAAAAAAAAAAAAAAAAAAAAAZ3xoSAAAAGl8fHx8agAAAAAAAAAAAAAAAAAAAAAAAAAAa2wAAAAAbXx8fHxuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABvfHx8fHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABxfHxycwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHR8fD0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVnV2dwAAAAAAAAAAAAAAAAAAAA==</data>
+                  <bankdata>
+                    <byte-array reference="../../data"/>
+                  </bankdata>
+                </dataBuffer>
+                <minX>0</minX>
+                <minY>0</minY>
+                <width>32</width>
+                <height>32</height>
+                <sampleModelTranslateX>0</sampleModelTranslateX>
+                <sampleModelTranslateY>0</sampleModelTranslateY>
+                <numBands>1</numBands>
+                <numDataElements>1</numDataElements>
+                <theTrackable reference="../dataBuffer/theTrackable"/>
+                <bandOffset>0</bandOffset>
+                <dataOffsets>
+                  <int>0</int>
+                </dataOffsets>
+                <scanlineStride>32</scanlineStride>
+                <pixelStride>1</pixelStride>
+                <data reference="../dataBuffer/data"/>
+                <type>1</type>
+                <maxX defined-in="sun.awt.image.ByteComponentRaster">32</maxX>
+                <maxY defined-in="sun.awt.image.ByteComponentRaster">32</maxY>
+                <inOrder>true</inOrder>
+                <dbOffset>0</dbOffset>
+                <dbOffsetPacked>0</dbOffsetPacked>
+                <packed>false</packed>
+                <maxX>32</maxX>
+                <maxY>32</maxY>
+              </raster>
+            </java.awt.image.BufferedImage>
+          </images>
+        </image>
         <weight>-1.0</weight>
         <canSail>false</canSail>
         <type>2</type>
         <label>Dog</label>
       </model.Crosser>
       <model.Crosser>
-        <image class="model.visuals.Chicken"/>
+        <image class="model.visuals.Chicken">
+          <images>
+            <java.awt.image.BufferedImage>
+              <accelerationPriority>0.5</accelerationPriority>
+              <surfaceManager class="sun.awt.image.BufImgSurfaceManager">
+                <bImg reference="../.."/>
+                <sdDefault class="sun.awt.image.BufImgSurfaceData">
+                  <pData>437232624</pData>
+                  <valid>true</valid>
+                  <surfaceLost>false</surfaceLost>
+                  <surfaceType reference="../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/surfaceType"/>
+                  <colorModel class="java.awt.image.ComponentColorModel" reference="../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/colorModel"/>
+                  <disposerReferent/>
+                  <stateDelegate>
+                    <theState>STABLE</theState>
+                    <numDynamicAgents>0</numDynamicAgents>
+                  </stateDelegate>
+                  <haveLCDLoop>0</haveLCDLoop>
+                  <havePgramXORLoop>0</havePgramXORLoop>
+                  <havePgramSolidLoop>0</havePgramSolidLoop>
+                  <bufImg reference="../../.."/>
+                  <solidloops reference="../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops"/>
+                </sdDefault>
+              </surfaceManager>
+              <imageType>6</imageType>
+              <colorModel class="java.awt.image.ComponentColorModel" reference="../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/colorModel"/>
+              <raster class="sun.awt.image.ByteInterleavedRaster">
+                <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+                  <width>32</width>
+                  <height>32</height>
+                  <numBands defined-in="java.awt.image.SampleModel">4</numBands>
+                  <dataType>0</dataType>
+                  <bandOffsets>
+                    <int>3</int>
+                    <int>2</int>
+                    <int>1</int>
+                    <int>0</int>
+                  </bandOffsets>
+                  <bankIndices>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                  </bankIndices>
+                  <numBands>4</numBands>
+                  <numBanks>1</numBanks>
+                  <scanlineStride>128</scanlineStride>
+                  <pixelStride>4</pixelStride>
+                </sampleModel>
+                <dataBuffer class="java.awt.image.DataBufferByte">
+                  <dataType>0</dataType>
+                  <banks>1</banks>
+                  <offset>0</offset>
+                  <size>4096</size>
+                  <offsets>
+                    <int>0</int>
+                  </offsets>
+                  <theTrackable reference="../../../surfaceManager/sdDefault/stateDelegate"/>
+                  <data>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AAAAALLl5dX/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5db/5eXW/67I4v8nfv//J37//yd+//8nfv//J37//yd+//8nfv//J37//yRq//8fSf//H0n//x9J/+08cfkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAw+Xl1v/l5db/6Oja/+zt3//q693/6ena/+fn1//l5db/5eXW/+Xl1v/l5db/iLPq/yd+//8nfv//J37//yd+//8nfv//J37//yd+//8nfv//JW///x9J//8gUv//IEz/+jZ3/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADL5eXW/+Xl1v/o6dn/8fLk//Hy5P/x8uT/8fLk/+/w4v/r7N3/5+fY/+Xl1v+Rt+j/J37//yd+//8nfv//J37//yd+//8nfv//J37//yd+//8nfP//IVf//yVy//8nfv//KX//H3ut5gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALzl5db/5eXW/+Xl1//x8uT/8fLk//Hy5P/x8uT/8fLk//Hy5P/x8uT/7e3f/8/a3f8qgP//J37//yd+//8nfv//J37//yd+//8nfv//J37//yd+//8nfv//J37//yd+//8nfv93dqfuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqubm1//l5db/5eXW/+/w4f/x8uT/8fLk//Hy5P/x8uT/8fLk//Hy5P/x8uT/8PHj/5m+7P8nfv//J37//yd+//8nfv//J37//yd+//8nfv//J37//yd+//8nfv//J37//yd+/69qo/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA5eXV/+Xl1v/l5db/6uvd//Hy5P/x8uT/8fLk//Hy5P/x8uT/8fLk//Hy5P/x8uT/8fLk/4Cx8f8nfv//J37//yd+//8nfv//J37//yd+//8nfv//J37//yd+//8nfv//J37/y22l8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFHm5tb/5eXW/+Xl1v/n59j/8fLk//Hy5P/x8uT/8fLk//Hy5P/x8uT/8fLk//Hy5P/x8uT/8PHj/22k8v8nfv//J37//yd+//8nfv//J37//yd+//8nfv//J37//yd+//9tpPCv3+DWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFefn2/vl5db/5eXW/+Xl1v/u7+H/8fLk//Hy5P/x8uT/8fLk//Hy5P/x8uT/8fLk//Hy5P/x8uT/7e3f/6jE4/9fnPP/LoL9/yd+//8nfv//KoD+/0GM+f9zqO//uc3f/+Xl1rfl5dcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuuXl1v/l5db/5eXW/+jp2f/x8uT/8fLk//Hy5P/x8uT/8fLk//Hy5P/x8uT/8fLk//Hy5P/x8uT/6OjZ/+Xl1v/l5db/29/Y/9Tc2v/l5db/5eXW/+Xl1v/l5db/5eXWv+bm1gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABb5ubV/+Xl1v/l5db/5eXW/+3t3//x8uT/8fLk//Hy5P/x8uT/8fLk//Hy5P/x8uT/8fLk//Hy5P/t7d//5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5daz5eXWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////Z5eXW/+Xl1v/l5db/5ubX//Dw4v/x8uT/8fLk//Hy5P/x8uT/8fLk//Hy5P/x8uT/8fLk//Hy4//m5tb/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5db/5eXW/+Xl1pnk5NUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFHm5tb/5eXW/+Xl1v/l5db/5+fY//Dx4//x8uT/8fLk//Hy5P/x8uT/8fLk//Hy5P/x8uT/8fLk/+bm2P/l5db/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5db/5eXWb+bm1gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ7l5df/5eXW/+Xl1v/l5db/5ufY/+7v4f/x8uT/8fLk//Hy5P/x8uT/8fLk//Hy5P/u7uD/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5dYw5OTVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC+jo0cPl5db/5eXW/+Xl1v/l5db/5eXW/+jo2f/r7N3/7e7f/+7v4P/s7d7/6urb/+bm1v/l5db/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5db/5eXWueXl1gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADu3t28Ll5db/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5db/5eXW/+Xl1t7l5dYV5+fbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABP//v4fl5dX95eXW/+Xl1v/l5db/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5dbA5OTWHOTk0QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACzo6Nar5ubX/eXl1v/l5db/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5db/5eXW/+Xl1v/l5dbW5eXWX+Tk1wP///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY6urVZ+Tk1arm5tfP5eXW7eXl1u7l5dbu5eXW2eXl1rbk5NZ+5eXXNuPj1QL///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</data>
+                  <bankdata>
+                    <byte-array reference="../../data"/>
+                  </bankdata>
+                </dataBuffer>
+                <minX>0</minX>
+                <minY>0</minY>
+                <width>32</width>
+                <height>32</height>
+                <sampleModelTranslateX>0</sampleModelTranslateX>
+                <sampleModelTranslateY>0</sampleModelTranslateY>
+                <numBands>4</numBands>
+                <numDataElements>4</numDataElements>
+                <theTrackable reference="../../surfaceManager/sdDefault/stateDelegate"/>
+                <bandOffset>3</bandOffset>
+                <dataOffsets>
+                  <int>3</int>
+                  <int>2</int>
+                  <int>1</int>
+                  <int>0</int>
+                </dataOffsets>
+                <scanlineStride>128</scanlineStride>
+                <pixelStride>4</pixelStride>
+                <data reference="../dataBuffer/data"/>
+                <type>1</type>
+                <maxX defined-in="sun.awt.image.ByteComponentRaster">32</maxX>
+                <maxY defined-in="sun.awt.image.ByteComponentRaster">32</maxY>
+                <inOrder>false</inOrder>
+                <dbOffset>0</dbOffset>
+                <dbOffsetPacked>0</dbOffsetPacked>
+                <packed>false</packed>
+                <maxX>32</maxX>
+                <maxY>32</maxY>
+              </raster>
+            </java.awt.image.BufferedImage>
+            <java.awt.image.BufferedImage>
+              <accelerationPriority>0.5</accelerationPriority>
+              <surfaceManager class="sun.awt.image.BufImgSurfaceManager">
+                <bImg reference="../.."/>
+                <sdDefault class="sun.awt.image.BufImgSurfaceData">
+                  <pData>437249648</pData>
+                  <valid>true</valid>
+                  <surfaceLost>false</surfaceLost>
+                  <surfaceType>
+                    <uniqueID>26</uniqueID>
+                    <desc>8-bit Indexed</desc>
+                    <next>
+                      <uniqueID>4</uniqueID>
+                      <desc>Any Discrete Byte</desc>
+                      <next reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/surfaceType/next/next"/>
+                      <pixelConverter reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/surfaceType/next/next/pixelConverter"/>
+                    </next>
+                    <pixelConverter reference="../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/surfaceType/next/next/pixelConverter"/>
+                  </surfaceType>
+                  <colorModel class="java.awt.image.IndexColorModel">
+                    <pData>0</pData>
+                    <pixel__bits>8</pixel__bits>
+                    <nBits>
+                      <int>8</int>
+                      <int>8</int>
+                      <int>8</int>
+                      <int>8</int>
+                    </nBits>
+                    <transparency>3</transparency>
+                    <supportsAlpha>true</supportsAlpha>
+                    <isAlphaPremultiplied>false</isAlphaPremultiplied>
+                    <numComponents>4</numComponents>
+                    <numColorComponents>3</numColorComponents>
+                    <colorSpace class="java.awt.color.ICC_ColorSpace" reference="../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/colorModel/colorSpace"/>
+                    <colorSpaceType>5</colorSpaceType>
+                    <maxBits>8</maxBits>
+                    <is__sRGB>true</is__sRGB>
+                    <transferType>0</transferType>
+                    <rgb>
+                      <int>0</int>
+                      <int>1241467167</int>
+                      <int>-318813921</int>
+                      <int>956254496</int>
+                      <int>184503578</int>
+                      <int>-369145569</int>
+                      <int>2063550751</int>
+                      <int>1577011742</int>
+                      <int>-1275115233</int>
+                      <int>-1879095010</int>
+                      <int>-1459664610</int>
+                      <int>1996441886</int>
+                      <int>83836928</int>
+                      <int>-1711322848</int>
+                      <int>1040140061</int>
+                      <int>-1426109920</int>
+                      <int>704596767</int>
+                      <int>-1392620511</int>
+                      <int>-168072138</int>
+                      <int>-385986523</int>
+                      <int>-1677768673</int>
+                      <int>-168008141</int>
+                      <int>-1427069842</int>
+                      <int>-1863342479</int>
+                      <int>1693297530</int>
+                      <int>50299008</int>
+                      <int>-117863358</int>
+                      <int>-168259769</int>
+                      <int>1524098790</int>
+                      <int>-2066290970</int>
+                      <int>-1529354779</int>
+                      <int>-1428691226</int>
+                      <int>-1646860827</int>
+                      <int>-2099845402</int>
+                      <int>1473701349</int>
+                      <int>601088738</int>
+                      <int>198306024</int>
+                      <int>-1848121883</int>
+                      <int>886630118</int>
+                      <int>1911531896</int>
+                      <int>-589895962</int>
+                      <int>-841554459</int>
+                      <int>-287906331</int>
+                      <int>450421474</int>
+                      <int>-755654561</int>
+                      <int>-1730681628</int>
+                      <int>100650086</int>
+                      <int>-16922040</int>
+                      <int>-153688603</int>
+                      <int>232319979</int>
+                      <int>1206759546</int>
+                      <int>1440081124</int>
+                      <int>-1107917228</int>
+                      <int>-1965627931</int>
+                      <int>-302419652</int>
+                      <int>-1294604827</int>
+                      <int>-84117706</int>
+                      <int>-1009326619</int>
+                      <int>535211387</int>
+                      <int>-875108891</int>
+                      <int>2012129142</int>
+                      <int>-1126767131</int>
+                      <int>-1343184022</int>
+                      <int>-873421459</int>
+                      <int>-2133465627</int>
+                      <int>-1344872225</int>
+                      <int>1373038310</int>
+                      <int>-1210587675</int>
+                      <int>-69802523</int>
+                      <int>366733287</int>
+                      <int>-1076435226</int>
+                      <int>-1160321563</int>
+                      <int>-1277762075</int>
+                      <int>1540744934</int>
+                      <int>-1714035484</int>
+                      <int>-640227867</int>
+                      <int>67108863</int>
+                      <int>1876354790</int>
+                      <int>819324132</int>
+                      <int>-1630018075</int>
+                      <int>-1177098779</int>
+                      <int>-556341787</int>
+                      <int>-1026103835</int>
+                      <int>249294317</int>
+                      <int>483517668</int>
+                      <int>-1059658524</int>
+                      <int>-36248091</int>
+                      <int>-2016025115</int>
+                      <int>79691775</int>
+                      <int>1607984356</int>
+                      <int>-690559515</int>
+                      <int>-1411914010</int>
+                      <int>752281832</int>
+                      <int>50331647</int>
+                      <int>919987171</int>
+                      <int>2128078309</int>
+                      <int>-1227430684</int>
+                      <int>-304683547</int>
+                      <int>-808000027</int>
+                      <int>1742071012</int>
+                      <int>416672490</int>
+                      <int>-46817</int>
+                      <int>-45792</int>
+                      <int>-105690</int>
+                      <int>-44255</int>
+                      <int>-34266</int>
+                      <int>-33241</int>
+                      <int>-32983</int>
+                      <int>-38108</int>
+                      <int>-98262</int>
+                      <int>-361176</int>
+                      <int>-10860990</int>
+                      <int>-3576784</int>
+                      <int>-1979983</int>
+                      <int>-2693659</int>
+                      <int>-20165</int>
+                      <int>-23242</int>
+                      <int>-32728</int>
+                      <int>-164568</int>
+                      <int>-9286083</int>
+                      <int>-2854866</int>
+                      <int>-682155</int>
+                      <int>-7859</int>
+                      <int>-25293</int>
+                      <int>-2044745</int>
+                      <int>-34260</int>
+                      <int>-31439</int>
+                      <int>-31695</int>
+                      <int>-33240</int>
+                      <int>-1006741</int>
+                      <int>-36827</int>
+                      <int>-98003</int>
+                      <int>-2564134</int>
+                      <int>-38364</int>
+                      <int>-1914706</int>
+                      <int>-46048</int>
+                      <int>-44512</int>
+                      <int>-37083</int>
+                      <int>-1395832</int>
+                      <int>-2627609</int>
+                      <int>-2430487</int>
+                      <int>-2233366</int>
+                      <int>-2101780</int>
+                      <int>-2430744</int>
+                      <int>-36315</int>
+                      <int>-43231</int>
+                      <int>-33753</int>
+                      <int>-1525871</int>
+                      <int>-2562073</int>
+                      <int>-2233109</int>
+                      <int>-1904401</int>
+                      <int>-1772815</int>
+                      <int>-2496024</int>
+                      <int>-32726</int>
+                      <int>-2237745</int>
+                      <int>-2101779</int>
+                      <int>-2628123</int>
+                      <int>-1261927</int>
+                      <int>-1838608</int>
+                      <int>-1969937</int>
+                      <int>-937600</int>
+                      <int>-1006483</int>
+                      <int>-875411</int>
+                      <int>-2110023</int>
+                      <int>-1070989</int>
+                      <int>-422847</int>
+                      <int>-163282</int>
+                      <int>-811937</int>
+                      <int>-1850200</int>
+                      <int>-1970194</int>
+                      <int>-2433836</int>
+                      <int>-2564133</int>
+                      <int>-2496280</int>
+                      <int>-2693402</int>
+                      <int>-1838351</int>
+                      <int>-1904400</int>
+                      <int>-2627866</int>
+                      <int>-2562330</int>
+                      <int>-2035986</int>
+                      <int>-2562074</int>
+                      <int>-2364694</int>
+                      <int>-2167316</int>
+                      <int>-2035730</int>
+                      <int>-2101523</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                      <int>-16777216</int>
+                    </rgb>
+                    <map__size>256</map__size>
+                    <pixel__mask>255</pixel__mask>
+                    <transparent__index>0</transparent__index>
+                    <allgrayopaque>false</allgrayopaque>
+                    <lookupcache>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                      <int>0</int>
+                    </lookupcache>
+                  </colorModel>
+                  <disposerReferent/>
+                  <stateDelegate>
+                    <theState>STABLE</theState>
+                    <numDynamicAgents>0</numDynamicAgents>
+                  </stateDelegate>
+                  <haveLCDLoop>0</haveLCDLoop>
+                  <havePgramXORLoop>0</havePgramXORLoop>
+                  <havePgramSolidLoop>0</havePgramSolidLoop>
+                  <bufImg reference="../../.."/>
+                  <solidloops>
+                    <drawLineLoop>
+                      <methodSignature>DrawLine(...)</methodSignature>
+                      <uniqueID>33820708</uniqueID>
+                      <sourceType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/sourceType"/>
+                      <compositeType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721035232</pNativePrim>
+                    </drawLineLoop>
+                    <fillRectLoop>
+                      <methodSignature>FillRect(...)</methodSignature>
+                      <uniqueID>100929572</uniqueID>
+                      <sourceType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/sourceType"/>
+                      <compositeType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721035008</pNativePrim>
+                    </fillRectLoop>
+                    <drawRectLoop>
+                      <methodSignature>DrawRect(...)</methodSignature>
+                      <uniqueID>168038436</uniqueID>
+                      <sourceType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/sourceType"/>
+                      <compositeType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721035288</pNativePrim>
+                    </drawRectLoop>
+                    <drawPolygonsLoop>
+                      <methodSignature>DrawPolygons(...)</methodSignature>
+                      <uniqueID>184815652</uniqueID>
+                      <sourceType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/sourceType"/>
+                      <compositeType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721035344</pNativePrim>
+                    </drawPolygonsLoop>
+                    <drawPathLoop>
+                      <methodSignature>DrawPath(...)</methodSignature>
+                      <uniqueID>201592868</uniqueID>
+                      <sourceType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/sourceType"/>
+                      <compositeType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721035400</pNativePrim>
+                    </drawPathLoop>
+                    <fillPathLoop>
+                      <methodSignature>FillPath(...)</methodSignature>
+                      <uniqueID>218370084</uniqueID>
+                      <sourceType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/sourceType"/>
+                      <compositeType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721035456</pNativePrim>
+                    </fillPathLoop>
+                    <fillSpansLoop>
+                      <methodSignature>FillSpans(...)</methodSignature>
+                      <uniqueID>117706788</uniqueID>
+                      <sourceType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/sourceType"/>
+                      <compositeType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721035064</pNativePrim>
+                    </fillSpansLoop>
+                    <fillParallelogramLoop>
+                      <methodSignature>FillParallelogram(...)</methodSignature>
+                      <uniqueID>134484004</uniqueID>
+                      <sourceType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/sourceType"/>
+                      <compositeType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721035120</pNativePrim>
+                    </fillParallelogramLoop>
+                    <drawParallelogramLoop>
+                      <methodSignature>DrawParallelogram(...)</methodSignature>
+                      <uniqueID>151261220</uniqueID>
+                      <sourceType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/sourceType"/>
+                      <compositeType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721035176</pNativePrim>
+                    </drawParallelogramLoop>
+                    <drawGlyphListLoop>
+                      <methodSignature>DrawGlyphList(...)</methodSignature>
+                      <uniqueID>268701732</uniqueID>
+                      <sourceType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/sourceType"/>
+                      <compositeType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType/next"/>
+                      <pNativePrim>1721035904</pNativePrim>
+                    </drawGlyphListLoop>
+                    <drawGlyphListAALoop>
+                      <methodSignature>DrawGlyphListAA(...)</methodSignature>
+                      <uniqueID>286920740</uniqueID>
+                      <sourceType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/sourceType"/>
+                      <compositeType reference="../../../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops/drawLineLoop/compositeType"/>
+                      <destType reference="../../../surfaceType"/>
+                      <pNativePrim>1721046088</pNativePrim>
+                    </drawGlyphListAALoop>
+                  </solidloops>
+                </sdDefault>
+              </surfaceManager>
+              <imageType>13</imageType>
+              <colorModel class="java.awt.image.IndexColorModel" reference="../surfaceManager/sdDefault/colorModel"/>
+              <raster class="sun.awt.image.ByteInterleavedRaster">
+                <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+                  <width>32</width>
+                  <height>32</height>
+                  <numBands defined-in="java.awt.image.SampleModel">1</numBands>
+                  <dataType>0</dataType>
+                  <bandOffsets>
+                    <int>0</int>
+                  </bandOffsets>
+                  <bankIndices>
+                    <int>0</int>
+                  </bankIndices>
+                  <numBands>1</numBands>
+                  <numBanks>1</numBanks>
+                  <scanlineStride>32</scanlineStride>
+                  <pixelStride>1</pixelStride>
+                </sampleModel>
+                <dataBuffer class="java.awt.image.DataBufferByte">
+                  <dataType>0</dataType>
+                  <banks>1</banks>
+                  <offset>0</offset>
+                  <size>1024</size>
+                  <offsets>
+                    <int>0</int>
+                  </offsets>
+                  <theTrackable reference="../../../surfaceManager/sdDefault/stateDelegate"/>
+                  <data>AAAAAAAAAAABAgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAVlBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHZWUICQoLDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1lZWVlZWUOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2VlZWVlZRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARZWZnEhMUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABVoaWpqaxYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXbGlqampqbRgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGRpqampqampqGxwdHh8gISIjACQlJgAAAAAAAAAAAAAnampqbm9wampqcXJycnJycnIoKXIqKwAAAAAAAAAAACxzdHV2d3hqamp5cnJycnJycnJycnItAAAAAAAAAAAuL3p6e2pqampqamp8cnJycnJycnJycjAxAAAAAAAAADJ9fn+AampqampqaoFycnJycnJycnJycjMAAAAAAAAANGVlZYJqampqampqg4RycnJycnJycnJyNQAAAAAAAAA2ZWVlhWpqampqampqhnJycnJycnJycnI3AAAAAAAAADiHiGWJampqampqamqKcnJycouMjY6PcjkAAAAAAAA6a2qQkZJqampqampqapNylJWWl5eXl5hyOwAAAAAAADxqampqampqampqamqZmpuXl5eXl5eXnHI9AAAAAAAAPmpqampqampqampqap2el5eXl5eXl59ych8AAAAAAAA/ampqampqampqamqgl5eXl5eXl5eXjXJyQAAAAAAAAEGhampqampqampqop6Xl5eXl5eXl5eUcnJCAAAAAAAAQ3KjpKVtamqmp6ibl5eXl5eXl5eXqXJyREUAAAAAAABGcnJycnKqq3JyrJeXl5eXl5eXl5eYcnJHAAAAAAAAAEhycnJycnJycnKbl5eXl5eXl5eXm3JyckkAAAAAAAAASnJycnJycnJyra6Xl5eXl5eXl6+wcnJLTAAAAAAAAABNcnJycnJycnKxl5eXl5eXl5eelHJyckIAAAAAAAAAAE5ycnJycnJycnKyl5eXl5eXqbNycnJPAAAAAAAAAAAAAFBycnJycnJycq20tba3laxycnJyOSQAAAAAAAAAAAAARVFycnJycnJycnJycnJycnJyclJTAAAAAAAAAAAAAAAAVFVycnJycnJycnJycnJyclZXWAAAAAAAAAAAAAAAAAAATFlacnJycnJycnJyclZbXAAAAAAAAAAAAAAAAAAAAAAAAF1eX2BLKiphYh9jZAAAAAAAAAAAAAAAAA==</data>
+                  <bankdata>
+                    <byte-array reference="../../data"/>
+                  </bankdata>
+                </dataBuffer>
+                <minX>0</minX>
+                <minY>0</minY>
+                <width>32</width>
+                <height>32</height>
+                <sampleModelTranslateX>0</sampleModelTranslateX>
+                <sampleModelTranslateY>0</sampleModelTranslateY>
+                <numBands>1</numBands>
+                <numDataElements>1</numDataElements>
+                <theTrackable reference="../../surfaceManager/sdDefault/stateDelegate"/>
+                <bandOffset>0</bandOffset>
+                <dataOffsets>
+                  <int>0</int>
+                </dataOffsets>
+                <scanlineStride>32</scanlineStride>
+                <pixelStride>1</pixelStride>
+                <data reference="../dataBuffer/data"/>
+                <type>1</type>
+                <maxX defined-in="sun.awt.image.ByteComponentRaster">32</maxX>
+                <maxY defined-in="sun.awt.image.ByteComponentRaster">32</maxY>
+                <inOrder>true</inOrder>
+                <dbOffset>0</dbOffset>
+                <dbOffsetPacked>0</dbOffsetPacked>
+                <packed>false</packed>
+                <maxX>32</maxX>
+                <maxY>32</maxY>
+              </raster>
+            </java.awt.image.BufferedImage>
+          </images>
+        </image>
         <weight>-1.0</weight>
         <canSail>false</canSail>
         <type>1</type>
         <label>Chicken</label>
       </model.Crosser>
       <model.Crosser>
-        <image class="model.visuals.Veggies"/>
+        <image class="model.visuals.Veggies">
+          <images>
+            <java.awt.image.BufferedImage>
+              <accelerationPriority>0.5</accelerationPriority>
+              <surfaceManager class="sun.awt.image.BufImgSurfaceManager">
+                <bImg reference="../.."/>
+                <sdDefault class="sun.awt.image.BufImgSurfaceData">
+                  <pData>437233520</pData>
+                  <valid>true</valid>
+                  <surfaceLost>false</surfaceLost>
+                  <surfaceType reference="../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/surfaceType"/>
+                  <colorModel class="java.awt.image.ComponentColorModel" reference="../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/colorModel"/>
+                  <disposerReferent/>
+                  <stateDelegate>
+                    <theState>STABLE</theState>
+                    <numDynamicAgents>0</numDynamicAgents>
+                  </stateDelegate>
+                  <haveLCDLoop>0</haveLCDLoop>
+                  <havePgramXORLoop>0</havePgramXORLoop>
+                  <havePgramSolidLoop>0</havePgramSolidLoop>
+                  <bufImg reference="../../.."/>
+                  <solidloops reference="../../../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/solidloops"/>
+                </sdDefault>
+              </surfaceManager>
+              <imageType>6</imageType>
+              <colorModel class="java.awt.image.ComponentColorModel" reference="../../../../../model.Crosser/image/images/java.awt.image.BufferedImage/surfaceManager/sdDefault/colorModel"/>
+              <raster class="sun.awt.image.ByteInterleavedRaster">
+                <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+                  <width>32</width>
+                  <height>32</height>
+                  <numBands defined-in="java.awt.image.SampleModel">4</numBands>
+                  <dataType>0</dataType>
+                  <bandOffsets>
+                    <int>3</int>
+                    <int>2</int>
+                    <int>1</int>
+                    <int>0</int>
+                  </bandOffsets>
+                  <bankIndices>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                  </bankIndices>
+                  <numBands>4</numBands>
+                  <numBanks>1</numBanks>
+                  <scanlineStride>128</scanlineStride>
+                  <pixelStride>4</pixelStride>
+                </sampleModel>
+                <dataBuffer class="java.awt.image.DataBufferByte">
+                  <dataType>0</dataType>
+                  <banks>1</banks>
+                  <offset>0</offset>
+                  <size>4096</size>
+                  <offsets>
+                    <int>0</int>
+                  </offsets>
+                  <theTrackable reference="../../../surfaceManager/sdDefault/stateDelegate"/>
+                  <data>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</data>
+                  <bankdata>
+                    <byte-array reference="../../data"/>
+                  </bankdata>
+                </dataBuffer>
+                <minX>0</minX>
+                <minY>0</minY>
+                <width>32</width>
+                <height>32</height>
+                <sampleModelTranslateX>0</sampleModelTranslateX>
+                <sampleModelTranslateY>0</sampleModelTranslateY>
+                <numBands>4</numBands>
+                <numDataElements>4</numDataElements>
+                <theTrackable reference="../../surfaceManager/sdDefault/stateDelegate"/>
+                <bandOffset>3</bandOffset>
+                <dataOffsets>
+                  <int>3</int>
+                  <int>2</int>
+                  <int>1</int>
+                  <int>0</int>
+                </dataOffsets>
+                <scanlineStride>128</scanlineStride>
+                <pixelStride>4</pixelStride>
+                <data reference="../dataBuffer/data"/>
+                <type>1</type>
+                <maxX defined-in="sun.awt.image.ByteComponentRaster">32</maxX>
+                <maxY defined-in="sun.awt.image.ByteComponentRaster">32</maxY>
+                <inOrder>false</inOrder>
+                <dbOffset>0</dbOffset>
+                <dbOffsetPacked>0</dbOffsetPacked>
+                <packed>false</packed>
+                <maxX>32</maxX>
+                <maxY>32</maxY>
+              </raster>
+            </java.awt.image.BufferedImage>
+            <java.awt.image.BufferedImage reference="../java.awt.image.BufferedImage"/>
+          </images>
+        </image>
         <weight>-1.0</weight>
         <canSail>false</canSail>
         <type>0</type>
@@ -48,6 +1599,8 @@ How can the farmer get across the river with all the 2 animals and the plant wit
       <type>0</type>
       <label>Plant</label>
     </model.Crosser>
+  </rightBank>
+  <leftBank>
     <model.Crosser>
       <image class="model.visuals.Dog" reference="../../../strategy/initialCrossers/model.Crosser[2]/image"/>
       <weight>-1.0</weight>
@@ -55,8 +1608,6 @@ How can the farmer get across the river with all the 2 animals and the plant wit
       <type>2</type>
       <label>Dog</label>
     </model.Crosser>
-  </rightBank>
-  <leftBank>
     <model.Crosser>
       <image class="model.visuals.Chicken" reference="../../../strategy/initialCrossers/model.Crosser[3]/image"/>
       <weight>-1.0</weight>
@@ -64,8 +1615,6 @@ How can the farmer get across the river with all the 2 animals and the plant wit
       <type>1</type>
       <label>Chicken</label>
     </model.Crosser>
-  </leftBank>
-  <tempCrossers>
     <model.Crosser>
       <image class="model.visuals.Farmer" reference="../../../strategy/initialCrossers/model.Crosser/image"/>
       <weight>-1.0</weight>
@@ -73,7 +1622,75 @@ How can the farmer get across the river with all the 2 animals and the plant wit
       <type>3</type>
       <label>Farmer</label>
     </model.Crosser>
-  </tempCrossers>
-  <numberOfSales>5</numberOfSales>
-  <boatOnTheLeftBank>false</boatOnTheLeftBank>
+  </leftBank>
+  <tempCrossers/>
+  <numberOfSales>4</numberOfSales>
+  <boatOnTheLeftBank>true</boatOnTheLeftBank>
+  <command>
+    <moves serialization="custom">
+      <unserializable-parents/>
+      <vector>
+        <default>
+          <capacityIncrement>0</capacityIncrement>
+          <elementCount>4</elementCount>
+          <elementData>
+            <command.Move>
+              <Crosser>
+                <model.Crosser reference="../../../../../../../../leftBank/model.Crosser[3]"/>
+                <model.Crosser reference="../../../../../../../../leftBank/model.Crosser[2]"/>
+              </Crosser>
+              <fromLeftToRight>true</fromLeftToRight>
+            </command.Move>
+            <command.Move>
+              <Crosser>
+                <model.Crosser reference="../../../../../../../../leftBank/model.Crosser[3]"/>
+              </Crosser>
+              <fromLeftToRight>false</fromLeftToRight>
+            </command.Move>
+            <command.Move>
+              <Crosser>
+                <model.Crosser reference="../../../../../../../../rightBank/model.Crosser"/>
+                <model.Crosser reference="../../../../../../../../leftBank/model.Crosser[3]"/>
+              </Crosser>
+              <fromLeftToRight>true</fromLeftToRight>
+            </command.Move>
+            <command.Move>
+              <Crosser>
+                <model.Crosser reference="../../../../../../../../leftBank/model.Crosser[2]"/>
+                <model.Crosser reference="../../../../../../../../leftBank/model.Crosser[3]"/>
+              </Crosser>
+              <fromLeftToRight>false</fromLeftToRight>
+            </command.Move>
+            <null/>
+            <null/>
+            <null/>
+            <null/>
+            <null/>
+            <null/>
+          </elementData>
+        </default>
+      </vector>
+    </moves>
+    <temp serialization="custom">
+      <unserializable-parents/>
+      <vector>
+        <default>
+          <capacityIncrement>0</capacityIncrement>
+          <elementCount>0</elementCount>
+          <elementData>
+            <null/>
+            <null/>
+            <null/>
+            <null/>
+            <null/>
+            <null/>
+            <null/>
+            <null/>
+            <null/>
+            <null/>
+          </elementData>
+        </default>
+      </vector>
+    </temp>
+  </command>
 </controller.RiverCrossingController>

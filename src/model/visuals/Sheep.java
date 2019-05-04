@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class Sheep implements ISprite {
 
-    private static BufferedImage[] images;
+    private BufferedImage[] images;
 
     public Sheep() throws IOException {
 

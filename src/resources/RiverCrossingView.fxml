@@ -11,9 +11,9 @@
     ]]><Pane prefHeight="372.0" prefWidth="541.0">
         <Button fx:id="saveGame" layoutX="439.0" layoutY="14.0" mnemonicParsing="false" onAction="#saveGame" prefHeight="25.0" prefWidth="88.0" text="Save Game" />
         <Button fx:id="newGame" layoutX="108.0" layoutY="14.0" mnemonicParsing="false" onAction="#newGame" prefHeight="25.0" prefWidth="88.0" text="New Game" />
-        <Button fx:id="undo" layoutX="218.0" layoutY="14.0" mnemonicParsing="false" onAction="#undo" prefHeight="25.0" prefWidth="30.0" />
-        <Button fx:id="reset" layoutX="260.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="21.0" />
-        <Button fx:id="redo" layoutX="293.0" layoutY="14.0" mnemonicParsing="false" onAction="#redo" prefHeight="25.0" prefWidth="30.0" />
+        <Button fx:id="undo" layoutX="215.0" layoutY="14.0" mnemonicParsing="false" onAction="#undo" prefHeight="25.0" prefWidth="30.0" />
+        <Button fx:id="reset" layoutX="253.0" layoutY="14.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="21.0" />
+        <Button fx:id="redo" layoutX="290.0" layoutY="14.0" mnemonicParsing="false" onAction="#redo" prefHeight="25.0" prefWidth="30.0" />
         <Button fx:id="instructions" layoutX="12.0" layoutY="14.0" mnemonicParsing="false" onAction="#showInstructions" prefHeight="25.0" prefWidth="88.0" text="Instructions" />
         <Button fx:id="solve" layoutX="14.0" layoutY="329.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Solve" />
         <Group layoutX="12.0" layoutY="62.0">

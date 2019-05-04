@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class Chicken implements ISprite {
-    private static BufferedImage[] images;
+    private BufferedImage[] images;
 
     public Chicken() throws IOException {
         images = new BufferedImage[2];

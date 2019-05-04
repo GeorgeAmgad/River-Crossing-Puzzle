@@ -1,7 +1,6 @@
 package command;
 
 import model.ICrosser;
-
 import java.util.List;
 import java.util.Stack;
 
@@ -9,8 +8,6 @@ public class Command {
 
     private Stack<Move> moves = new Stack<>();
     private Stack<Move> temp = new Stack<>();
-
-
 
 
     public void saveMove(List<ICrosser> crossers, boolean fromLeftToRight) {
@@ -38,6 +35,9 @@ public class Command {
         return !moves.empty();
     }
 
-
+    public void reset() {
+        moves = new Stack<>();
+        temp = new Stack<>();
+    }
 
 }

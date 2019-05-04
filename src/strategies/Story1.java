@@ -29,7 +29,7 @@ public class Story1 implements ICrossingStrategy {
 
     // TODO: 4/29/2019 add level name in position [0] and fetch it inside the engine
 
-    private String[] Instructions = {"“ A farmer wants to cross a river and take with him a dog, a chicken and a basket of veggies.” " + "\n" + "\n" +
+    private String[] Instructions = {"1","“ A farmer wants to cross a river and take with him a dog, a chicken and a basket of veggies.” " + "\n" + "\n" +
             "1. The farmer is the only one who can sail the boat. He can only take one passenger, in addition to himself. " + "\n" +
             "2. The dog can harm the chicken and the chicken can eat the veggies " + "\n" +
             "3. You can not leave any two crossers on the same bank if they can harm each other " + "\n" + "\n" +
@@ -45,7 +45,7 @@ public class Story1 implements ICrossingStrategy {
         initialCrossers.add(new Crosser(new Farmer(), -1, true, Crosser.FARMER, "Farmer"));
         initialCrossers.add(new Crosser(new Dog(), -1, false, Crosser.CARNIVOROUS, "Dog"));
         initialCrossers.add(new Crosser(new Chicken(), -1, false, Crosser.HERBIVOROUS, "Chicken"));
-        initialCrossers.add(new Crosser(new Veggies(), -1, false, Crosser.PLANT, "Plant"));
+        initialCrossers.add(new Crosser(new Veggies(), -1, false, Crosser.PLANT, "Veggies"));
     }
 
 

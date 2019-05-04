@@ -1,6 +1,5 @@
 import controller.RiverCrossingController;
 import javafx.embed.swing.SwingFXUtils;
-import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -9,13 +8,17 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import model.Crosser;
 import model.ICrosser;
 import strategies.ICrossingStrategy;
 import strategies.Story1;
 import strategies.Story2;
+
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +40,6 @@ public class GameEngine implements Initializable {
 
     public Canvas canvas;
 
-    private static ICrossingStrategy strategy;
     public AnchorPane pane;
     public Label message;
 
@@ -67,13 +69,20 @@ public class GameEngine implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        Image Iundo = new Image("resources/002-undo.png");
+        Image Iredo = new Image("resources/002-redo.png");
+        Image Ireset = new Image("resources/003-star.png");
+
+        redo.setGraphic(new ImageView(Iredo));
+        undo.setGraphic(new ImageView(Iundo));
+        reset.setGraphic(new ImageView(Ireset));
+
+        redo.setDisable(true);
+        undo.setDisable(true);
         solve.setDisable(true);
-        controller.newGame(GameEngine.strategy);
-        story.setText(getLevelName(strategy));
-        moves.setText(String.valueOf(controller.getNumberOfSails()));
         leftBank = new ArrayList<>();
-        leftBank = controller.getCrossersOnLeftBank();
-        rightBank = controller.getCrossersOnRightBank();
+        rightBank = new ArrayList<>();
         crossers = new ArrayList<>();
 
         gc = canvas.getGraphicsContext2D();
@@ -101,21 +110,16 @@ public class GameEngine implements Initializable {
         rightPositions.add(new Position(443.0, 159.0));
         // end of applying positions to canvas
 
-
-        render();
+        newGame();
     }
 
     public void showInstructions() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Instructions");
-        alert.setHeaderText("level" + getLevelName(strategy));
+        alert.setHeaderText("level " + controller.getInstructions()[0]);
         alert.setX(500);
-        alert.setContentText(strategy.getInstructions()[0]);
+        alert.setContentText(controller.getInstructions()[1]);
         alert.showAndWait();
-    }
-
-    static void setStrategy(ICrossingStrategy strategy) {
-        GameEngine.strategy = strategy;
     }
 
     public void newGame() {
@@ -126,9 +130,10 @@ public class GameEngine implements Initializable {
         choices.add("Level 2");
 
         ChoiceDialog<String> dialog = new ChoiceDialog<>("Level 1", choices);
-        dialog.setTitle("River Crossing Game");
-        dialog.setHeaderText("please Choose Level");
+        dialog.setTitle("River Crossing Puzzle");
+        dialog.setHeaderText("Please choose level");
         dialog.setContentText("level:");
+
 
         Optional<String> result = dialog.showAndWait();
         result.ifPresent(s -> {
@@ -148,28 +153,21 @@ public class GameEngine implements Initializable {
                             chosenLevel = Story1.getInstance();
                     }
                     controller.newGame(chosenLevel);
-                    GameEngine.setStrategy(chosenLevel);
-                    story.setText(getLevelName(strategy));
+                    story.setText(controller.getInstructions()[0]);
                     moves.setText(String.valueOf(controller.getNumberOfSails()));
-                    leftBank = new ArrayList<>();
                     leftBank = controller.getCrossersOnLeftBank();
-                    rightBank = new ArrayList<>();
                     rightBank = controller.getCrossersOnRightBank();
                     crossers = new ArrayList<>();
+                    move.setDisable(false);
+                    render();
+                    showInstructions();
                 }
         );
-        move.setDisable(false);
-        render();
-    }
+        if (!result.isPresent() && story.getText().equals(" ")) { // verify if cancelled on start of game
+            Stage stage = (Stage) reset.getScene().getWindow();  //get the stage of any button
+            stage.close();
+        }
 
-    private String getLevelName(ICrossingStrategy strategy) {
-        if (strategy instanceof Story1) {
-            return "1";
-        }
-        if (strategy instanceof Story2) {
-            return "2";
-        }
-        return "unknown";
     }
 
     public void clickSprite(MouseEvent mouseEvent) {
@@ -210,7 +208,6 @@ public class GameEngine implements Initializable {
                 }
             }
         }
-
 
 
         //manage clicks on crossers to put back on the shore
@@ -261,7 +258,7 @@ public class GameEngine implements Initializable {
                     leftPositions.get(i).y - (leftBank.get(i).getEatingRank() == Crosser.FARMER && i < 4 ? 32.0 : 0));
 
             gc.fillText(leftBank.get(i).getLabelToBeShown(),
-                    leftPositions.get(i).x ,
+                    leftPositions.get(i).x,
                     leftPositions.get(i).y + 40 + (leftBank.get(i).getEatingRank() == Crosser.FARMER && i > 4 ? 16 : 0));
         }
 
@@ -271,7 +268,7 @@ public class GameEngine implements Initializable {
                     rightPositions.get(i).y - (rightBank.get(i).getEatingRank() == Crosser.FARMER ? 32.0 : 0));
 
             gc.fillText(rightBank.get(i).getLabelToBeShown(),
-                    rightPositions.get(i).x ,
+                    rightPositions.get(i).x,
                     rightPositions.get(i).y + 40 + (rightBank.get(i).getEatingRank() == Crosser.FARMER && i > 4 ? 16 : 0));
         }
 
@@ -282,7 +279,7 @@ public class GameEngine implements Initializable {
                         leftRaftPositions.get(i).y - (crossers.get(i).getEatingRank() == Crosser.FARMER ? 32.0 : 0));
 
                 gc.fillText(crossers.get(i).getLabelToBeShown(),
-                        leftRaftPositions.get(i).x ,
+                        leftRaftPositions.get(i).x,
                         leftRaftPositions.get(i).y + 40 + (crossers.get(i).getEatingRank() == Crosser.FARMER && i > 4 ? 16 : 0));
             }
         } else {
@@ -292,7 +289,7 @@ public class GameEngine implements Initializable {
                         rightRaftPositions.get(i).y - (crossers.get(i).getEatingRank() == Crosser.FARMER ? 32.0 : 0));
 
                 gc.fillText(crossers.get(i).getLabelToBeShown(),
-                        rightRaftPositions.get(i).x ,
+                        rightRaftPositions.get(i).x,
                         rightRaftPositions.get(i).y + 40 + (crossers.get(i).getEatingRank() == Crosser.FARMER && i > 4 ? 16 : 0));
             }
         }
@@ -305,10 +302,13 @@ public class GameEngine implements Initializable {
             update();
             render();
             if (leftBank.isEmpty() && crossers.isEmpty()) {
+                message.setTextFill(Color.web("#008000"));
                 message.setText("Well done!");
                 move.setDisable(true);
+                undo.setDisable(true);
             }
         } else {
+            message.setTextFill(Color.web("#FF0000"));
             message.setText("Invalid move!");
         }
     }
@@ -320,11 +320,13 @@ public class GameEngine implements Initializable {
 
         redo.setDisable(!controller.canRedo());
         undo.setDisable(!controller.canUndo());
+        message.setText("");
     }
 
     public void saveGame() {
         controller.setTempCrossers(crossers);
         controller.saveGame();
+        message.setTextFill(Color.web("#008000"));
         message.setText("Saved game successfully!");
     }
 
@@ -332,23 +334,44 @@ public class GameEngine implements Initializable {
         move.setDisable(false);
         controller.loadGame();
         crossers = controller.getTempCrossers();
-        message.setText("Loaded game successfully!");
         update();
+        message.setTextFill(Color.web("#008000"));
+        message.setText("Loaded game successfully!");
         render();
     }
 
     public void undo() {
-        if (controller.canUndo()) {
-            controller.undo();
+        if (crossers.isEmpty()) {
+            crossers = new ArrayList<>();
+            if (controller.canUndo()) {
+                controller.undo();
+            }
+            update();
+            render();
+        } else {
+            message.setTextFill(Color.web("#FF0000"));
+            message.setText("cannot undo with crossers on raft!");
         }
-        update();
-        render();
     }
 
     public void redo() {
-        if (controller.canRedo()) {
-            controller.redo();
+        if (crossers.isEmpty()) {
+            crossers = new ArrayList<>();
+            if (controller.canRedo()) {
+                controller.redo();
+            }
+            update();
+            render();
+        } else {
+            message.setTextFill(Color.web("#FF0000"));
+            message.setText("cannot redo with crossers on raft!");
         }
+    }
+
+    public void reset() {
+        controller.resetGame();
+        crossers = new ArrayList<>();
+        move.setDisable(false);
         update();
         render();
     }
@@ -357,11 +380,9 @@ public class GameEngine implements Initializable {
         double x;
         double y;
 
-        Position(double x, double y) {
+        private Position(double x, double y) {
             this.x = x;
             this.y = y;
         }
     }
-
-
 }

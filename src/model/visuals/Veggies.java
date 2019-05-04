@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class Veggies implements ISprite {
 
-    private static BufferedImage[] images;
+    private BufferedImage[] images;
 
     public Veggies() throws IOException {
         images = new BufferedImage[2];

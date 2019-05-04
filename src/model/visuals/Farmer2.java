@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class Farmer2 implements ISprite {
 
-    private static BufferedImage[] images;
+    private BufferedImage[] images;
 
     public Farmer2() throws IOException {
         images = new BufferedImage[2];

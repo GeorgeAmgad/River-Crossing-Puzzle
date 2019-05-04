@@ -36,11 +36,17 @@ public class RiverCrossingController implements IRiverCrossingController {
         rightBank = new ArrayList<>();
         numberOfSales = 0;
         boatOnTheLeftBank = true;
+        command.reset();
     }
 
     @Override
     public void resetGame() {
-
+        leftBank = new ArrayList<>();
+        leftBank = strategy.getInitialCrossers();
+        rightBank = new ArrayList<>();
+        command.reset();
+        numberOfSales = 0;
+        boatOnTheLeftBank = true;
     }
 
     @Override
@@ -106,7 +112,6 @@ public class RiverCrossingController implements IRiverCrossingController {
     @Override
     public void undo() {
         Move move = command.undoMove();
-
         if (move.isFromLeftToRight()) {
             for (ICrosser crosser : move.getCrosser()) {
                 leftBank.add(crosser); // inverted from the move method
@@ -137,7 +142,7 @@ public class RiverCrossingController implements IRiverCrossingController {
                 rightBank.remove(crosser);
             }
         }
-        boatOnTheLeftBank = !move.isFromLeftToRight();  //switch boat place in any move
+        boatOnTheLeftBank = !move.isFromLeftToRight();
         numberOfSales++;
     }
 
